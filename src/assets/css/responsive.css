@@ -1,0 +1,134 @@
+/* Mobile Devices (portrait and smaller phones) */
+@media only screen and (max-width: 480px) {
+    .service-section-bg {
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        padding-bottom: 830px !important;
+    }
+
+    .how-ot-work-section-bg {
+        margin-top: -810px !important;
+    }
+
+    .glass-container {
+        padding: 50px 21px !important;
+    }
+
+    .glass-container-letter {
+        width: 90% !important;
+        padding: 84px 0px 60px 0px !important;
+    }
+
+    .right-arrow svg {
+        height: 70px !important;
+    }
+
+    .right-arrow {
+        position: absolute;
+        top: 216px !important;
+        left: -24px !important;
+    }
+
+    .middle-arrow svg {
+        height: 112px !important;
+    }
+
+    .middle-arrow {
+        position: absolute;
+        top: 350px !important;
+        left: -60px !important;
+    }
+
+    .left-arrow svg {
+        height: 85px !important;
+    }
+
+    .left-arrow {
+        position: absolute;
+        top: -23px !important;
+        left: 187px !important;
+    }
+
+    .addons-menu-css {
+        padding: 14px !important;
+    }
+
+    .progress-circle {
+        padding: 0px 1px 2px 0px !important;
+        border-radius: 20px !important;
+        font-size: 12px !important;
+        height: 24px !important;
+    }
+
+    .header-box{
+        width: 93% !important;
+    }
+    .step-count-main-box{
+        transform: translateX(40vw);
+    }
+
+
+
+
+}
+
+/* Tablets (portrait and small tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* Make the slick track a flex container */
+    .pricing-slider .slick-track {
+        display: flex !important;
+    }
+
+    /* Force each slide to stretch fully */
+    .pricing-slider .slick-slide {
+        height: auto !important;
+        display: flex !important;
+    }
+
+    /* Make the actual slide content fill the height */
+    .pricing-slider .slick-slide>div {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+    }
+}
+
+/* Laptops (small to medium screens) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .glass-container-letter {
+        padding: 100px 0px !important;
+    }
+
+    .middle-arrow {
+        position: absolute;
+        top: 319px !important;
+        left: -19px !important;
+    }
+
+    .middle-arrow svg {
+        height: 190px !important;
+    }
+
+    .left-arrow svg {
+        height: 120px !important;
+        width: auto !important;
+    }
+
+    .left-arrow {
+        position: absolute;
+        top: -34px !important;
+        left: 586px !important;
+    }
+
+    .right-arrow {
+        position: absolute;
+        top: 210px !important;
+        left: 71px !important;
+    }
+}
+
+/* Desktops (larger screens) */
+@media only screen and (min-width: 1025px) {
+    /* CSS for desktops */
+}
