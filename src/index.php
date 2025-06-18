@@ -70,7 +70,7 @@ include "header.php";
 
     <div class="container mx-auto px-4 lg:px-8 mt-10">
         <div class="grid">
-            <div class="slider">
+            <div class="slider" data-direction="left" data-speed="80">
                 <div class="slider-track">
                     <div class="slide"><img src="./assets/image/Awards Logo/2023_INC_PowerPartner_Standard_Logo 2.png"
                             alt="Logo 1" /></div>
@@ -85,9 +85,6 @@ include "header.php";
 
         </div>
     </div>
-
-
-
 
 </section>
 
@@ -317,8 +314,8 @@ include "header.php";
     <div class="container  mx-auto px-4 lg:px-8">
         <div class="grid">
             <div class="text-center">
-                <h1 class="large_title_small"> Pricing & Plans</h1>
-                <p class="body-text-2 text-[#B0B0B0]">Flexible Memberships for Every Stage of Growth</p>
+                <h1 class="large_title_small">ONE Subscription. TWO Plans.</h1>
+                <p class="body-text-2 text-[#B0B0B0]">Tailored for every stage of growth.</p>
             </div>
         </div>
     </div>
@@ -443,21 +440,32 @@ include "header.php";
 
                     </div>
 
-                    <div class="relative  my-2 hidden  group-hover:block transition-all duration-300 ease-in-out">
-
-                        <!-- <span
-                            class="absolute -top-3 left-1/2 -translate-x-1/2   w-0 h-0  border-x-12 border-x-transparent  border-b-12 border-b-white">
-                        </span> -->
-
+                    <div class="relative my-2 transition-all duration-300 ease-in-out">
                         <ul class="pb-4 pl-[24px]">
-                            <li class="page-nav">See how much you save</li>
+                            <li class="page-nav cursor-pointer text-[var(--primary)]" onclick="toggleSavings()">See how
+                                much you save</li>
                         </ul>
 
-                        <div
-                            class="px-4 py-4 text-center rounded-full bg-[#242424] text-white caption-2  whitespace-nowrap">
-                            <span class="">🎉 $3,499</span> savings over 6&nbsp;months
+                        <div id="savings-info"
+                            class="opacity-0 scale-95 pointer-events-none transition-all duration-300 delay-200 ease-in-out px-4 py-4 text-center rounded-full bg-[#242424] text-white caption-2 whitespace-nowrap hidden">
+                            <span>🎉 $3,499</span> savings over 6&nbsp;months
                         </div>
                     </div>
+
+
+
+
+                    <!-- <div class="relative transition-all duration-300 ease-in-out">
+                        <ul class="pb-4 pl-[24px]">
+                            <li class="page-nav cursor-pointer text-[var(--primary)]" onclick="toggleSavings()">See how
+                                much you save</li>
+                        </ul>
+
+                        <div id="savings-info"
+                            class="hidden px-4 py-4 text-center rounded-full bg-[#242424] text-white caption-2 whitespace-nowrap">
+                            <span>🎉 $3,499</span> savings over 6&nbsp;months
+                        </div>
+                    </div> -->
 
                     <div class="flex flex-col sm:flex-row gap-4 mt-10 justify-start">
                         <a href="#" onclick="openCheckout('halfyearly')"
@@ -652,40 +660,40 @@ include "header.php";
         </div>
     </div>
 
+    <div class="container mx-auto py-8 ">
 
-    <div class="container mx-auto lg:px-8">
-        <div class="grid">
-            <div class="ux-div">
-                <h1 class="subheadline_medium">UI/UX</h1>
-            </div>
-            <div class="slider">
-                <div class="slider-track">
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/1.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/2.webp" alt="Logo 2" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/3.webp" alt="Logo 4" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/4.webp" alt="Logo 5" /></div>
+        <div class="ux-div my-2">
+            <h1 class="subheadline_medium">UI/UX</h1>
+        </div>
 
-                </div>
-            </div>
-            <h1 class="subheadline_medium">Social Creative</h1>
-            <div class="slider-right">
-                <div class="slider-track-right">
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-1.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-2.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-3.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-4.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-5.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-6.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-7.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-8.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-9.webp" alt="Logo 1" /></div>
-                    <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-10.webp" alt="Logo 1" />
-                    </div>
-
-                </div>
+        <div class="slider" data-direction="left" data-speed="150">
+            <div class="slider-track">
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/1.webp" alt="Logo 1" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/2.webp" alt="Logo 2" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/3.webp" alt="Logo 4" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/4.webp" alt="Logo 5" /></div>
             </div>
         </div>
-        <div class="text-center">
+
+      <h1 class="subheadline_medium my-2">Social Creative</h1>
+
+        
+        <div class="slider" data-direction="right" data-speed="130">
+            <div class="slider-track">
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-1.webp" alt="Logo 1" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-2.webp" alt="Logo 2" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-3.webp" alt="Logo 3" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-4.webp" alt="Logo 4" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-5.webp" alt="Logo 5" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-6.webp" alt="Logo 6" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-7.webp" alt="Logo 7" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-8.webp" alt="Logo 8" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-9.webp" alt="Logo 9" /></div>
+                <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-10.webp" alt="Logo 10" /></div>
+            </div>
+        </div>
+
+       <div class="text-center">
             <p class="body-text-2 text-[#B0B0B0]"> Social media, paid ads, websites, branding - we build assets that
                 drive real growth.</p>
         </div>
@@ -774,7 +782,7 @@ include "header.php";
         </div>
 
         <div class="grid">
-            <div class="slider mt-[50px]">
+            <div class="slider mt-[50px]" data-direction="left" data-speed="70">
                 <div class="slider-track">
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
@@ -839,8 +847,8 @@ include "header.php";
 
         <div class="container mx-auto mt-3">
             <div class="grid">
-                <div class="slider-testimonial">
-                    <div class="slider-track-testimonial">
+                <div class="slider" data-direction="left" data-speed="80">
+                    <div class="slider-track">
 
                         <div class="slide-testimonial">
                             <div
@@ -1070,10 +1078,10 @@ include "header.php";
             </div>
         </div>
 
-        <div class="container mx-auto">
+        <div class="container mx-auto my-4">
             <div class="grid">
-                <div class="slider-right-testimonial">
-                    <div class="slider-track-right-testimonial">
+                <div class="slider" data-direction="right" data-speed="70">
+                    <div class="slider-track">
 
                         <div class="slide-testimonial">
                             <div
@@ -1616,8 +1624,8 @@ include "getstarted.php"
     let currentWord = 0;
     let currentChar = 0;
     let isDeleting = false;
-    const typingSpeed = 100;
-    const deletingSpeed = 90;
+    const typingSpeed = 75;
+    const deletingSpeed = 50;
     const pauseBetweenWords = 1000;
     const typedText = document.getElementById("typed-text");
 
@@ -1820,7 +1828,7 @@ include "getstarted.php"
 <!-- awards slider script -->
 
 
-<script>
+<!-- <script>
     const sliderTracks = document.querySelectorAll('.slider-track');
 
     sliderTracks.forEach(sliderTrack => {
@@ -1845,7 +1853,52 @@ include "getstarted.php"
             });
         });
     });
+</script> -->
+
+
+
+<script>
+    function initializeSliders() {
+        // This finds ALL sliders on the page, in any section
+        const sliders = document.querySelectorAll('.slider');
+
+        sliders.forEach((slider, index) => {
+            const track = slider.querySelector('.slider-track');
+            if (!track) return;
+
+            const direction = slider.getAttribute('data-direction') || 'left';
+            const speed = parseInt(slider.getAttribute('data-speed')) || 50;
+
+            // Clone slides
+            const originalSlides = Array.from(track.children);
+            originalSlides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                track.appendChild(clone);
+            });
+
+            // Calculate and apply unique animation
+            setTimeout(() => {
+                const slideWidth = track.children[0].offsetWidth;
+                const gap = 40;
+                const singleSetWidth = (slideWidth + gap) * originalSlides.length;
+                const animationName = `slider-${index}-${direction}`;
+                const duration = singleSetWidth / speed;
+
+                let keyframes = direction === 'left'
+                    ? `@keyframes ${animationName} { 0% { transform: translateX(0px); } 100% { transform: translateX(-${singleSetWidth}px); } }`
+                    : `@keyframes ${animationName} { 0% { transform: translateX(-${singleSetWidth}px); } 100% { transform: translateX(0px); } }`;
+
+                const style = document.createElement('style');
+                style.textContent = keyframes;
+                document.head.appendChild(style);
+                track.style.animation = `${animationName} ${duration}s linear infinite`;
+            }, 100 * (index + 1));
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', initializeSliders);
 </script>
+
 
 <script>
     const sliderTrack = document.querySelector('.slider-track-testimonial');
@@ -1954,6 +2007,30 @@ include "getstarted.php"
 <script>
     function openCheckout(plan) {
         window.open(`step-form.php?plan=${plan}`, '_blank');
+    }
+</script>
+
+<!-- script to show and hide the tooltip of popular pricing  -->
+<script>
+    function toggleSavings() {
+        const el = document.getElementById('savings-info');
+
+        if (el.classList.contains('hidden')) {
+            el.classList.remove('hidden');
+            // Trigger transition after reflow
+            requestAnimationFrame(() => {
+                el.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                el.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+            });
+        } else {
+            el.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+            el.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+
+            // Wait for transition to end before hiding
+            setTimeout(() => {
+                el.classList.add('hidden');
+            }, 300); // Match duration
+        }
     }
 </script>
 

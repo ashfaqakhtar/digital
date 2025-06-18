@@ -299,7 +299,7 @@ html {
 
 
 /* infinte awards slider  */
-.slider {
+/* .slider {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -342,50 +342,6 @@ html {
     transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gradient shadows on both ends */
-/* .slider::before,
-.slider::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.slider::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.849), transparent);
-}
-
-.slider::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 849), transparent);
-} */
-
-
-/* .slider::before,
-.slider::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.slider::before {
-    left: 0;
-    background: linear-gradient(to right, rgb(14, 1, 1), rgba(255,255,255,0));
-}
-
-.slider::after {
-    right: 0;
-    background: linear-gradient(to left, rgb(14, 1, 1), rgba(255,255,255,0));
-} */
-
 
 @keyframes scroll {
 
@@ -409,11 +365,11 @@ html {
     100% {
         transform: translateX(-50%);
     }
-}
+} */
 
 /* right slide animation */
 
-.slider-right {
+/* .slider-right {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -455,35 +411,7 @@ html {
     transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .slider-right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 10;
-    pointer-events: none;
-}
 
-.slider-right::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.slider-right::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.849), transparent);
-}
-
-.slider-right::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.849), transparent);
-} */
 
 @keyframes scroll-reverse {
     0% {
@@ -505,145 +433,87 @@ html {
     100% {
         transform: translateX(0);
     }
-}
+} */
 
 
 
-
-
-
-
-/* 
-.slider,
-.slider-right {
+.slider {
     overflow: hidden;
     position: relative;
     width: 100%;
-    padding: 20px 0;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+   
 }
 
-.slider-track,
-.slider-track-right {
+.slider-track {
     display: flex;
-    width: max-content;
-    align-items: center;
     gap: 40px;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+    width: max-content;
 }
 
-.slider-track {
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
-
-.slider-track {
-    animation-name: scroll;
-    animation-duration: 12s;
-}
-
-
-.slider-track-right {
-    animation-name: scroll-reverse;
-    animation-duration: 16s;
-}
-
-
-.slide,
-.slide-right {
+.slide {
     flex: 0 0 auto;
-    width: auto;
+}
+
+.slide img {
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.slide img,
-.slide-right img {
-    display: block;
-    object-fit: contain;
-    border-radius: 8px;
-    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
-}
-
-
-.slider::before,
-.slider::after,
-.slider-right::before,
-.slider-right::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.slider::before,
-.slider-right::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-}
-
-.slider::after,
-.slider-right::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
-}
-
-
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+.slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
     }
 
-    25% {
-        transform: translateX(-12.5%);
+    .slider-track {
+      display: flex;
+      gap: 40px;
+      width: max-content;
     }
 
-    50% {
-        transform: translateX(-25%);
+    .slide {
+      flex: 0 0 auto;
     }
 
-    75% {
-        transform: translateX(-37.5%);
+    .slide img {
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    100% {
-        transform: translateX(-50%);
-    }
-}
+  
 
-
-
-
-@keyframes scroll-reverse {
-    0% {
-        transform: translateX(-50%);
+    .slider-right {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
     }
 
-    25% {
-        transform: translateX(-37.5%);
+    .slider-track-right {
+      display: flex;
+      gap: 40px;
+      width: max-content;
     }
 
-    50% {
-        transform: translateX(-25%);
+    .slide-right {
+      flex: 0 0 auto;
     }
 
-    75% {
-        transform: translateX(-12.5%);
+    .slide-right img {
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    100% {
-        transform: translateX(0);
-    }
-} */
 
 
 /* infinte awards slider ends */
@@ -953,9 +823,9 @@ html {
 .step-card.active {
     transform: scale(1.05);
     border-color: #F36B21;
-    border: 6px solid var(--primary);
-    background-color: #FFF;
-    color: #000;
+    border: 6px solid #F36B21;
+    background: linear-gradient(154deg, #000 80.02%, #F36B21 123.85%);
+    color: #ffffff;
 }
 
 .step-count.active {
@@ -1202,23 +1072,20 @@ html {
     color: #ffffff;
 }
 
-/* .swiper-slide {
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.swiper-slide {
     width: auto !important;
+    padding: 0 10px;
 }
 
-.slider-track {
-    animation: marquee 25s linear infinite;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-} */
 
 /* popup video CSS */
 

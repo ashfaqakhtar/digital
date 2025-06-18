@@ -29,6 +29,8 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <link rel="preload" as="script" href="https://www.cdnstyles.com/static/snapshot_widget/v1/snapshot.widget.js">
+
 
 
     <!-- aos    -->
@@ -57,6 +59,7 @@
             <!-- Navigation Links (Desktop) -->
             <div class="nav-links hidden lg:flex">
                 <ul class="flex space-x-6">
+                    <li><a href="https://occamsadvisory.com/" target="_blank"><i class="fas fa-home"></i></a></li>
                     <li><a href="#service-section" class="hover:text-[var(--primary)] page-nav">Services</a></li>
                     <li><a href="#how-it-works-section" class="hover:text-[var(--primary)] page-nav">How it
                             Works</a></li>
@@ -100,11 +103,13 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobileMenu"
-            class="hidden  flex-col items-center absolute top-full left-0 w-full bg-white border border-gray-200 rounded-lg shadow-lg p-5 lg:hidden">
+            class="hidden  flex-col items-center absolute top-full left-0 w-full bg-black border border-gray-200 rounded-lg shadow-lg p-5 lg:hidden">
             <ul class="flex flex-col space-y-4 text-center">
-                <li><a href="#service-section" class="hover:text-gray-600 text-black">Services</a></li>
-                <li><a href="#how-it-works-section" class="hover:text-gray-600 text-black">How it Works</a></li>
-                <li><a href="#pricing-section" class="hover:text-gray-600 text-black">Pricing Plans</a></li>
+                <li><a href="https://occamsadvisory.com/" target="_blank"><i class="fas fa-home text-white"></i></a>
+                </li>
+                <li><a href="#service-section" class="hover:text-gray-600 text-white">Services</a></li>
+                <li><a href="#how-it-works-section" class="hover:text-gray-600 text-white">How it Works</a></li>
+                <li><a href="#pricing-section" class="hover:text-gray-600 text-white">Pricing Plans</a></li>
                 <li class="list-none  lg:hidden">
                     <a href="https://occams-digital.smblogin.com/login/"
                         class="page-nav inline-flex items-center gap-2 orange-cta">
