@@ -662,7 +662,7 @@ include "header.php";
 
     <div class="container mx-auto py-8 ">
 
-        <div class="ux-div my-2">
+        <div class="ux-div my-4">
             <h1 class="subheadline_medium">UI/UX</h1>
         </div>
 
@@ -675,7 +675,7 @@ include "header.php";
             </div>
         </div>
 
-      <h1 class="subheadline_medium my-2">Social Creative</h1>
+      <h1 class="subheadline_medium my-[30px]">Social Creative</h1>
 
         
         <div class="slider" data-direction="right" data-speed="130">
@@ -693,7 +693,7 @@ include "header.php";
             </div>
         </div>
 
-       <div class="text-center">
+       <div class="text-center mt-4">
             <p class="body-text-2 text-[#B0B0B0]"> Social media, paid ads, websites, branding - we build assets that
                 drive real growth.</p>
         </div>
@@ -1078,7 +1078,7 @@ include "header.php";
             </div>
         </div>
 
-        <div class="container mx-auto my-4">
+        <div class="container mx-auto mt-10">
             <div class="grid">
                 <div class="slider" data-direction="right" data-speed="70">
                     <div class="slider-track">
