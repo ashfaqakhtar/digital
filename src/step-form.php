@@ -1,6 +1,10 @@
 <?php
 $title = "Occams Digital";
+$meta = "Occams Digital";
+$metakeyword = "Occams Digital";
+
 include "header.php";
+require_once '../secrets.php';
 ?>
 <script src="email.js"></script>
 
@@ -111,8 +115,9 @@ include "header.php";
                                                 class="absolute -top-3 left-4 bg-[#242424] px-1 text-sm text-gray-400 transition-all">
                                                 Full Name<span class="text-red-500">*</span>
                                             </label>
-                                            <input type="text" id="fullname"
-                                                class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-white" />
+                                            <input type="text" id="fullname" name="fullname"
+                                                class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-white"
+                                                / required>
                                         </div>
 
                                         <!-- Email -->
@@ -122,8 +127,9 @@ include "header.php";
                                                 class="absolute -top-3 left-4 bg-[#242424] px-1 text-sm text-gray-400 transition-all">
                                                 Email<span class="text-red-500">*</span>
                                             </label>
-                                            <input type="email" id="email" placeholder=""
-                                                class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-white" />
+                                            <input type="email" id="email" name="email" placeholder=""
+                                                class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-white"
+                                                / required>
                                         </div>
                                     </div>
 
@@ -134,8 +140,9 @@ include "header.php";
                                             class="absolute -top-3 left-4 bg-[#242424] px-1 text-sm text-gray-400 transition-all">
                                             Company Name<span class="text-red-500">*</span>
                                         </label>
-                                        <input type="text" id="company" placeholder=""
-                                            class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-white" />
+                                        <input type="text" id="company" name="company" placeholder=""
+                                            class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-white"
+                                            / required>
                                     </div>
 
                                     <!-- How did you hear about us -->
@@ -145,7 +152,7 @@ include "header.php";
                                             class="absolute -top-3 left-4 bg-[#242424] px-1 text-sm text-gray-400 transition-all">
                                             How did you hear about us?
                                         </label>
-                                        <textarea id="message" rows="4"
+                                        <textarea id="message" name="message" rows="4"
                                             class="bg-transparent w-full focus:outline-none mt-1 text-white placeholder-gray-400 resize-none"></textarea>
                                     </div>
                                 </form>
@@ -211,7 +218,9 @@ include "header.php";
                             <div class="col-span-3 addons-menu-css">
 
                                 <div class="mb-[50px]">
-                                    <h2 class="plan-title heading_2 text-[var(--primary)] mb-4 ">Essential Plan</h2>
+                                    <h2 class="plan-title heading_2 text-[var(--primary)] mb-4 "
+                                        data-name="Essentials Plan" data-amount="3499"
+                                        data-price-id="price_1RYmIoDAo2OreUHG7rP1STDq">Essential Plan</h2>
                                     <p class="mb-6">
                                         <span class="plan-price heading_2 total-monthly-plan">$3,499/mo</span>
                                         <span class="plan-price page-nav text-[#747474] total-addon-service">($3,499 + 0
@@ -232,8 +241,9 @@ include "header.php";
                                     </div>
 
                                     <!-- first add-ons     -->
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] cursor-pointer"
+                                        data-name="Reputation Management Tool" data-amount="50"
+                                        data-price-id="price_1RYXAmDAo2OreUHGaHY0XdmP" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -249,15 +259,22 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium">
-                                            <div></div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$50/mo</div>
                                         </div>
                                     </div>
 
                                     <!-- 2nd add-ons  -->
 
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Campaign based Landing Page" data-amount="298"
+                                        data-price-id="price_1RYmF3DAo2OreUHG3G5A6oWe" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -273,15 +290,22 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div>1</div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$299/mo</div>
                                         </div>
                                     </div>
 
                                     <!-- 3rd add-ons   -->
 
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="AI Chat Receptionist" data-amount="50"
+                                        data-price-id="price_1RYmFlDAo2OreUHG5ikM51mN" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -297,15 +321,22 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div></div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$50/mo</div>
                                         </div>
                                     </div>
 
                                     <!-- 4th add-ons   -->
 
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="AI Knowledgebase Builder" data-amount="50"
+                                        data-price-id="price_1RYmG0DAo2OreUHGKEBanwyb" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -321,7 +352,13 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div></div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$50/mo</div>
                                         </div>
                                     </div>
@@ -329,8 +366,9 @@ include "header.php";
 
                                     <!-- 5th add-ons   -->
 
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Website Copy, Design and Development" data-amount="3000"
+                                        data-price-id="price_1RYmGMDAo2OreUHG8wLYgN8Z" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -368,14 +406,21 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div>1</div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$3000/project</div>
                                         </div>
                                     </div>
 
                                     <!-- 6th add-ons   -->
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Website Maintenance On Wordpress" data-amount="69"
+                                        data-price-id="price_1RYmGaDAo2OreUHGHyg684EY" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -391,14 +436,21 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div>1</div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$69/mo</div>
                                         </div>
                                     </div>
 
                                     <!-- 7th add-ons   -->
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Email Campaign" data-amount="198"
+                                        data-price-id="price_1RYmGmDAo2OreUHGOypUq9W2" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -414,14 +466,21 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div>1</div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$199/campaign</div>
                                         </div>
                                     </div>
 
                                     <!-- 8th add-ons   -->
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Unlimited Requests Graphic Design" data-amount="1500"
+                                        data-price-id="price_1RYmGyDAo2OreUHGic7UyeWk" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -437,14 +496,21 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div></div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$1500/mo</div>
                                         </div>
                                     </div>
 
                                     <!-- 9th add-ons   -->
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Content and Copywriting (5-hrs Per Qty)" data-amount="1500"
+                                        data-price-id="price_1RYmHHDAo2OreUHGgv3XZDp1" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -475,14 +541,21 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div>1</div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$750/mo</div>
                                         </div>
                                     </div>
 
                                     <!-- 10th add-ons   -->
-                                    <div
-                                        class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer">
+                                    <div class="addon-item flex items-center justify-between  rounded-[2.1875rem] border border-[#676767] p-[10px] mt-4 cursor-pointer"
+                                        data-name="Additional Social Media Account Management (10 posts per month)"
+                                        data-amount="200" data-price-id="price_1RYmHUDAo2OreUHGjqA6OIfu" data-qty="1">
 
                                         <div class="flex gap-4 justify-center items-center">
                                             <div>
@@ -513,7 +586,13 @@ include "header.php";
 
 
                                         <div class="flex space-x-8 text-sm font-medium ">
-                                            <div>1</div>
+                                            <div class="flex space-x-8 text-sm font-medium items-center">
+                                                <div class="qty-controls flex items-center space-x-2">
+                                                    <button class="decrease px-2 rounded-full">−</button>
+                                                    <span class="qty-value">1</span>
+                                                    <button class="increase px-2 rounded-full">+</button>
+                                                </div>
+                                            </div>
                                             <div>$200/mo</div>
                                         </div>
                                     </div>
@@ -602,179 +681,74 @@ include "header.php";
                                                 document.getElementById("effectiveDate").value = new Date().toISOString().split('T')[0];
                                             </script>
 
-                                            <section class="px-6 py-10 max-w-7xl mx-auto text-white">
-                                                <h1 class="text-3xl font-bold mb-6">Scope of Services</h1>
+                                            <p><br>Service Provider: <strong>Occams Digital, a division of Occams
+                                                    Advisory Inc.</strong></p>
 
-                                                <div class="mb-8">
-                                                    <p class="font-semibold">Client has selected a subscription plan
-                                                        (Essential or Half-Yearly) offered by Occams Digital:</p>
-                                                    <h2 class="text-xl font-bold mt-4">A. Essential Monthly Plan —
-                                                        $3,499/month</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>Unlimited graphic and motion design (1 active request at a
-                                                            time, unlimited revisions)</li>
-                                                        <li>SEO and Local SEO setup</li>
-                                                        <li>3 social media account setups</li>
-                                                        <li>Management of 1 social media account (up to 10 posts per
-                                                            month)</li>
-                                                        <li>1 email campaign per month</li>
-                                                        <li>PPC ad campaign setup and management (management limited to
-                                                            $1,500 in PPC ad spend, but the ad spend sold separately)
-                                                        </li>
-                                                        <li>Up to 4 Brand Audit Reports per month</li>
-                                                        <li>Business App access</li>
-                                                        <li>CRM and platform integrations for one website</li>
-                                                        <li>One-time Full Brand Audit included</li>
-                                                    </ul>
-                                                </div>
+                                            <div class="section">
+                                                <h2>1. Scope of Services</h2>
+                                                <h3>A. Essential Monthly Plan — $3,499/month</h3>
+                                                <ul>
+                                                    <li>Unlimited graphic and motion design (1 active request at a time,
+                                                        unlimited revisions)</li>
+                                                    <li>SEO and Local SEO setup</li>
+                                                    <li>3 social media account setups</li>
+                                                    <li>Management of 1 social media account (up to 10 posts per month)
+                                                    </li>
+                                                    <li>1 email campaign per month</li>
+                                                    <li>PPC ad campaign setup and management (management limited to
+                                                        $1,500 in PPC ad spend, sold separately)</li>
+                                                    <li>Up to 4 Brand Audit Reports per month</li>
+                                                    <li>Business App access</li>
+                                                    <li>CRM and platform integrations for one website</li>
+                                                    <li>One-time Full Brand Audit included</li>
+                                                </ul>
 
-                                                <div class="mb-8">
-                                                    <h2 class="text-xl font-bold">B. Half-Yearly Plan (6 for 5) —
-                                                        $17,495</h2>
-                                                    <p class="mt-2">Client receives six months of Essential Monthly Plan
-                                                        services for the price of five (one month free).</p>
-                                                    <p class="mt-2">Optional Smart Add-Ons are available at additional
-                                                        monthly cost (See Schedule A).</p>
-                                                </div>
+                                                <h3>B. Half-Yearly Plan — $17,495</h3>
+                                                <p>Includes 6 months of Essential plan services for the price of 5
+                                                    months.</p>
+                                                <p>Optional Smart Add-Ons available (see Schedule A).</p>
+                                            </div>
 
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">2. Term and Renewal</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>Monthly Plan: 1-month commitment, auto-renews unless
-                                                            canceled with 30 days’ notice.</li>
-                                                        <li>Half-Yearly Plan: Pay for 5 months, get 6th free
-                                                            (non-refundable), auto-renews unless canceled with 30 days’
-                                                            notice.</li>
-                                                    </ul>
-                                                </div>
+                                            <div class="section">
+                                                <h2>2–15. Legal Terms (Summary)</h2>
+                                                <ul>
+                                                    <li><strong>Term:</strong> Auto-renewal with 30 days’ written notice
+                                                        to cancel.</li>
+                                                    <li><strong>Payment:</strong> Due in advance, non-refundable,
+                                                        services start after payment.</li>
+                                                    <li><strong>Delivery:</strong> 2–4 business days typical; complex
+                                                        tasks may take longer.</li>
+                                                    <li><strong>Ownership:</strong> Final deliverables are Client’s
+                                                        after full payment.</li>
+                                                    <li><strong>License:</strong> Limited use of Client IP during
+                                                        project term.</li>
+                                                    <li><strong>Indemnity:</strong> Client ensures rights to content
+                                                        they provide.</li>
+                                                    <li><strong>Disclaimers:</strong> No performance guarantees,
+                                                        services provided “as is.”</li>
+                                                    <li><strong>Passwords:</strong> Client is responsible for secure and
+                                                        unique credentials.</li>
+                                                    <li><strong>Termination:</strong> 5-day notice by Client; Occams may
+                                                        cancel anytime.</li>
+                                                    <li><strong>Confidentiality:</strong> Survives 2 years after
+                                                        termination.</li>
+                                                    <li><strong>Liability:</strong> Limited to one month’s paid fee.
+                                                    </li>
+                                                    <li><strong>Governing Law:</strong> State of Florida, USA.</li>
+                                                </ul>
+                                            </div>
 
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">3. Payment Terms</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>Fees payable in advance via credit card or ACH.</li>
-                                                        <li>Non-refundable payments.</li>
-                                                        <li>Billing occurs same day each cycle unless agreed otherwise.
-                                                        </li>
-                                                        <li>Service suspension for payments late by 5+ days.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">4. Revisions and Delivery</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>One-at-a-time task queue unless "Unlimited Requests" add-on
-                                                            is purchased.</li>
-                                                        <li>Turnaround: 2–4 business days per request.</li>
-                                                        <li>Complex tasks may take longer; timeline provided upon
-                                                            intake.</li>
-                                                        <li>Digital marketing and add-on tasks may exceed standard
-                                                            timelines.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">5. Ownership and Rights</h2>
-                                                    <p class="mt-2">Client receives full rights upon payment. Occams
-                                                        Digital may showcase work in portfolio unless agreed otherwise.
-                                                    </p>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">6. Grant of License</h2>
-                                                    <p class="mt-2">Client grants Occams Digital a limited license to
-                                                        use its IP solely to provide services.</p>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">7. No Exclusivity</h2>
-                                                    <p class="mt-2">Occams Digital may work with other clients,
-                                                        regardless of industry.</p>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">8. Client Representations;
-                                                        Indemnification</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>Client must have rights to all materials provided.</li>
-                                                        <li>Client to inform about applicable regulations.</li>
-                                                        <li>Client indemnifies Occams Digital against IP-related claims.
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">9. Warranties and Disclaimers</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>No guarantees of specific business results.</li>
-                                                        <li>Services provided "as is" without warranties.</li>
-                                                        <li>No warranties on third-party tools/platforms.</li>
-                                                        <li>Client delays are not Occams Digital’s responsibility.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">10. Client Account Access and
-                                                        Password Security</h2>
-                                                    <p class="mt-2">Client must provide necessary credentials. Occams
-                                                        Digital will handle credentials with care but is not liable for
-                                                        breaches due to weak or shared passwords.</p>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">11. Termination</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>Client may cancel with 5-day notice before billing.</li>
-                                                        <li>Occams Digital may cancel anytime with notice.</li>
-                                                        <li>No prorated refunds unless cancellation is initiated by
-                                                            Occams Digital.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">12. Confidentiality</h2>
-                                                    <p class="mt-2">Both parties agree to confidentiality for 2 years
-                                                        post-termination.</p>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">13. Limitation of Liability;
-                                                        Disclaimers</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>No liability for indirect or consequential damages.</li>
-                                                        <li>Max liability limited to one month’s paid service.</li>
-                                                        <li>No liability for third-party tool issues.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">14. Arbitration; Governing Law</h2>
-                                                    <p class="mt-2">Agreement governed by laws of the State of Florida,
-                                                        United States.</p>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">15. Miscellaneous</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>No partnership, agency, or employment created.</li>
-                                                        <li>This document represents the full agreement.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="mb-8">
-                                                    <h2 class="text-2xl font-bold">16. Add-on Scope Clarification
-                                                        Clause: Website Design & Development</h2>
-                                                    <ul class="list-disc ml-6 mt-2 space-y-2">
-                                                        <li>$3,000/project for standard 5–6 page business websites.</li>
-                                                        <li>Includes layout design, responsive dev, 2 revision rounds,
-                                                            basic form, SEO-ready markup, CMS setup.</li>
-                                                        <li>Excludes e-commerce, web apps, advanced animations, API
-                                                            integrations, and copywriting beyond provided content.</li>
-                                                        <li>Custom quote for advanced features; Change Order needed for
-                                                            scope changes.</li>
-                                                        <li>Work begins only after scope is agreed in writing.</li>
-                                                    </ul>
-                                                </div>
-                                            </section>
+                                            <div class="section">
+                                                <h2>16. Website Design Scope</h2>
+                                                <p><strong>$3,000/project</strong> – includes:</p>
+                                                <ul>
+                                                    <li>Up to 6 standard pages</li>
+                                                    <li>Wireframes, layout, responsive design</li>
+                                                    <li>2 revision rounds, CMS setup, SEO-ready</li>
+                                                </ul>
+                                                <p><strong>Excludes:</strong> e-commerce, custom apps, copywriting,
+                                                    branding, APIs, legal content</p>
+                                            </div>
 
                                             <div class="section">
                                                 <h2>Signature</h2>
@@ -788,7 +762,7 @@ include "header.php";
                                                 </p>
                                             </div>
 
-                                            <div class="section">
+                                            <div class="'/[;oK+lsection">
                                                 <h2>Schedule A – Smart Add-Ons</h2>
                                                 <table id="addons-table" class="w-full text-left border-collapse">
                                                     <thead>
@@ -833,7 +807,7 @@ include "header.php";
 
 
                                 <div class="mt-8">
-                                    <button type="button"
+                                    <button type="button" id="prevBtn"
                                         class="prevBtn bg-[var(--black)] border-1 border-white  text-white px-6 py-2 rounded-full cta-font cursor-pointer hover:scale-105 transition-all duration-300 ease-in">Previous</button>
                                 </div>
                             </div>
@@ -862,7 +836,8 @@ include "header.php";
                                     </div>
                                     <div class="mt-8 text-center">
                                         <button type="button"
-                                            class="nextBtn w-full bg-[var(--primary)]  text-white px-6 py-2 rounded-full cta-font cursor-pointer hover:scale-105 transition-all duration-300 ease-in">Next</button>
+                                            class="nextBtn w-full bg-[var(--primary)]  text-white px-6 py-2 rounded-full cta-font cursor-pointer hover:scale-105 transition-all duration-300 ease-in"
+                                            id="submitButton">Next</button>
                                     </div>
                                 </div>
                             </div>
@@ -877,11 +852,30 @@ include "header.php";
             <!-- ———— STEP 4 ———— -->
             <fieldset data-step="3" class="py-6  hidden">
 
+                <div id="loader" style="display: none; text-align: center; margin-top: 20px;">
+                    <div class="spinner"></div>
+                    <p>Processing your payment, please wait...</p>
+                </div>
 
-
-                <stripe-buy-button buy-button-id="buy_btn_1RYXCpDAo2OreUHG3G0NQ2IT"
+                <!-- <stripe-buy-button buy-button-id="buy_btn_1RYXCpDAo2OreUHG3G0NQ2IT"
                     publishable-key="pk_test_51RYX7wDAo2OreUHGdcEW4IlCNTKS8EGwqvO9pQ9edTfiR8saG5a63snRajOBk4JLkcMfdB4RQjjjp965zmLwSQI900WJUCkycJ">
-                </stripe-buy-button>
+                </stripe-buy-button> -->
+
+                <form id="payment-form">
+                    <label>
+                        Email
+                        <input type="text" id="payment_email" placeholder="you@example.com" /></label>
+                    <div type="text" id="email-errors"></div>
+                    <h4>Payment</h4>
+                    <div id="payment-element">
+                        <!--Stripe.js injects the Payment Element-->
+                    </div>
+                    <button id="submit">
+                        <div class="spinner hidden" id="spinner"></div>
+                        <span id="button-text">Pay now</span>
+                    </button>
+                    <div id="payment-message" class="hidden"></div>
+                </form>
 
 
                 <div class="mt-8 flex gap-10">
@@ -894,6 +888,7 @@ include "header.php";
 
                 </div>
             </fieldset>
+            <input type="hidden" name="clientSecret" id="clientSecret" value="">
         </form>
     </div>
 </div>
@@ -905,9 +900,8 @@ include "footer.php"
 <!-- Send email persional details -->
 
 
-
-
 <script>
+    // Parse plan from URL
     const params = new URLSearchParams(window.location.search);
     const plan = params.get("plan");
 
@@ -920,50 +914,45 @@ include "footer.php"
         halfyearly: {
             name: "Popular",
             price: "$17,495",
-            showAddons: false
+            showAddons: true
         }
     };
 
     const planInfo = planData[plan];
 
     if (planInfo) {
-        // Update all .plan-title and .plan-price elements
         document.querySelectorAll(".plan-title").forEach(el => el.textContent = planInfo.name);
         document.querySelectorAll(".plan-price").forEach(el => el.textContent = planInfo.price);
-
-        // Show add-ons if applicable
         if (planInfo.showAddons) {
             document.getElementById("addons-section").style.display = "block";
         }
     } else {
         document.querySelectorAll(".plan-title").forEach(el => el.textContent = "Invalid Plan");
         document.querySelectorAll(".plan-price").forEach(el => el.textContent = "");
-        document.getElementById("addons_price").style.display = "none";
-
     }
-</script>
-<script>
-    const fullNameInput = document.getElementById("fullname");
-    const companyNameInput = document.getElementById("company");
-    const emailInput = document.getElementById("email");
 
-    const displayFullName = document.getElementById("displayFullName");
-    const displayCompany = document.getElementById("displayCompany");
-    const displayEmail = document.getElementById("displayEmail");
-
-    fullNameInput.addEventListener("input", () => {
-        displayFullName.textContent = fullNameInput.value;
+    // Mirror personal details
+    document.getElementById("fullname")?.addEventListener("input", e => {
+        document.getElementById("displayFullName").textContent = e.target.value;
+    });
+    document.getElementById("company")?.addEventListener("input", e => {
+        document.getElementById("displayCompany").textContent = e.target.value;
+    });
+    document.getElementById("email")?.addEventListener("input", e => {
+        document.getElementById("displayEmail").textContent = e.target.value;
     });
 
-    companyNameInput.addEventListener("input", () => {
-        displayCompany.textContent = companyNameInput.value;
-    });
+    // Utility
+    function formatCurrency(amount) {
+        return `$${amount.toLocaleString()}`;
+    }
 
-    emailInput.addEventListener("input", () => {
-        displayEmail.textContent = emailInput.value;
-    });
-</script>
-<script>
+    function getBasePrice() {
+        const priceText = document.querySelector(".plan-price")?.textContent || "$0";
+        const cleaned = priceText.replace(/[^\d.]/g, '');
+        return parseFloat(cleaned) || 0;
+    }
+
     // Core elements
     const addonsPopup = document.getElementById('addonsPopup');
     const addonsBtn = document.getElementById('addonsBtn');
@@ -972,23 +961,13 @@ include "footer.php"
     const monthlyPriceElems = document.querySelectorAll('.total-monthly-plan');
     const addonInfoElem = document.querySelector('.total-addon-service');
     const addonsTbody = document.getElementById("addons-tbody");
-    const addonsTotal = document.getElementById("addons-total");
     const addonItems = document.querySelectorAll('.addon-item');
-    const originalMonthlyPrice = 3499;
 
     let lastAddedAddonPrice = 0;
 
-    // Utility to format price
-    function formatCurrency(amount) {
-        return `$${amount.toLocaleString()}`;
-    }
-
-    // Main update function
     function updateTotal() {
         let total = 0;
         let selectedCount = 0;
-
-        // Clear table
         addonsTbody.innerHTML = "";
 
         const selectedAddons = document.querySelectorAll('.addon-item.selected');
@@ -998,67 +977,50 @@ include "footer.php"
         }
 
         selectedAddons.forEach(item => {
-            const priceQtyDivs = item.querySelectorAll('.flex.space-x-8 > div');
+            const name = item.dataset.name || "Unnamed Addon";
+            const quantity = parseInt(item.dataset.qty) || 1;
+            const price = parseFloat(item.dataset.amount) || 0;
 
-            const name =
-                item.querySelector(".body-text-1")?.textContent ||
-                item.querySelector("li.page-nav")?.textContent?.trim();
+            const subtotal = quantity * price;
+            total += subtotal;
+            selectedCount++;
 
-            if (priceQtyDivs.length >= 2) {
-                const qtyText = priceQtyDivs[0].textContent.trim();
-                const priceText = priceQtyDivs[1].textContent.trim();
-
-                const quantity = qtyText && !isNaN(qtyText) ? parseInt(qtyText, 10) : 1;
-                const priceMatch = priceText.match(/[\$$]?([\d,\.]+)/);
-
-                if (priceMatch) {
-                    const price = parseFloat(priceMatch[1].replace(/,/g, ''));
-                    total += price * quantity;
-                    selectedCount++;
-
-                    // Append to summary table
-                    const row = document.createElement("tr");
-                    row.innerHTML = `
-            <td class="py-2 px-4">${name}</td>
-            <td class="py-2 px-4">${formatCurrency(price * quantity)}</td>
-          `;
-                    addonsTbody.appendChild(row);
-                }
-            }
+            const row = document.createElement("tr");
+            row.innerHTML = `
+    <td class="py-2 px-4">${name} × ${quantity}</td>
+    <td class="py-2 px-4">${formatCurrency(subtotal)}</td>
+  `;
+            addonsTbody.appendChild(row);
         });
 
-        // Update popup total
         totalAmountEl.textContent = `${formatCurrency(total)}/mo`;
 
-        // Update summary total
         document.querySelectorAll('.addons-total').forEach(el => {
             el.textContent = `${formatCurrency(total)}/mo`;
         });
-        // Update plan total
-        const finalPrice = originalMonthlyPrice + total;
+
+        const basePrice = getBasePrice();
+        const finalPrice = basePrice + total;
+
         monthlyPriceElems.forEach(elem => {
             elem.textContent = `${formatCurrency(finalPrice)}/mo`;
         });
 
-        // Update add-on count display
         if (addonInfoElem) {
-            addonInfoElem.textContent = `(${formatCurrency(originalMonthlyPrice)} + ${selectedCount} Add-ons)`;
+            addonInfoElem.textContent = `(${formatCurrency(basePrice)} + ${selectedCount} Add-ons)`;
         }
 
         return total;
     }
 
-    // Toggle on click
+    // Add-on click toggle
     addonItems.forEach(item => {
         item.addEventListener('click', () => {
             item.classList.toggle('selected');
-
             const defaultIcon = item.querySelector('.default-icon');
             const selectedIcon = item.querySelector('.selected-icon');
-
             defaultIcon?.classList.toggle('hidden');
             selectedIcon?.classList.toggle('hidden');
-
             updateTotal();
         });
     });
@@ -1083,11 +1045,57 @@ include "footer.php"
     });
 </script>
 
-
-
-
-
 <script>
+    const updateStepIndicators = () => {
+        const stepElements = document.querySelectorAll('#stepIndicator .step');
+
+        stepElements.forEach((stepEl, index) => {
+            const img = stepEl.querySelector('img');
+            const label = stepEl.querySelector('span');
+
+            // Clear previous background classes
+            stepEl.classList.remove('bg-green-600', 'bg-[var(--primary)]', 'bg-gray-800');
+
+            // Remove existing check icon if present
+            const existingIcon = stepEl.querySelector('.step-icon');
+            if (existingIcon) existingIcon.remove();
+
+            if (index < currentStep) {
+                stepEl.classList.add('bg-green-600');
+
+                // Hide image and insert check icon
+                img.style.display = 'none';
+
+                const checkIcon = document.createElement('i');
+                checkIcon.className = 'fa-solid fa-check text-white text-sm step-icon';
+
+                // Insert check icon after the image
+                img.parentNode.insertBefore(checkIcon, img.nextSibling);
+
+                label.classList.remove('text-gray-400');
+                label.classList.add('text-white');
+            } else if (index === currentStep) {
+                stepEl.classList.add('bg-[var(--primary)]');
+
+                img.style.display = ''; // Show image again
+
+                label.classList.remove('text-gray-400');
+                label.classList.add('text-white');
+            } else {
+                stepEl.classList.add('bg-gray-800');
+
+                img.style.display = ''; // Show image again
+
+                label.classList.remove('text-white');
+                label.classList.add('text-gray-400');
+            }
+        });
+    };
+
+</script>
+
+
+<!-- <script>
     let currentStep = 0;
     const steps = document.querySelectorAll('fieldset[data-step]');
     const progressBar = document.getElementById('progressBar');
@@ -1141,4 +1149,240 @@ include "footer.php"
     document.querySelectorAll('.prevBtn').forEach(btn =>
         btn.addEventListener('click', () => goToStep(currentStep - 1))
     );
+</script> -->
+<script>
+    function getUrlParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function resetStripeForm() {
+        // Clear hidden inputs
+        document.getElementById('clientSecret').value = '';
+        document.getElementById('payment_email').value = '';
+
+        // Remove old Stripe script
+        const oldScript = document.querySelector('script[src$="stripe/checkout.js"]');
+        if (oldScript) {
+            oldScript.remove();
+            //console.log('[STRIPE RESET] Old Stripe script removed');
+        }
+
+        // Reset Stripe-related global vars
+        window.totalAmount = null;
+        window.clientSecret = null;
+        window.stripe = null; // If you stored Stripe globally
+
+        // Reset loader UI
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.style.display = 'none';
+            loader.innerHTML = '';
+        }
+    }
+
+    document.querySelector('#prevBtn').addEventListener('click', () => {
+        resetStripeForm();
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const planDetails = {
+            monthly: {
+                name: "Essential",
+                amount: "3499",
+                price_id: "price_1RYXADDAo2OreUHGDdbCff3X"
+            },
+            halfyearly: {
+                name: "Popular",
+                amount: "17495",
+                price_id: "price_1RbSZqDAo2OreUHGv5LNrJKR"
+            }
+        };
+
+        let checkoutPayload = {
+            plan: {},
+            addons: [],
+            customer: {}
+        };
+
+        try {
+            const planKey = getUrlParam('plan');
+            if (planKey && planDetails[planKey]) {
+                checkoutPayload.plan = planDetails[planKey];
+                checkoutPayload.plan.key = planKey;
+            } else {
+                //console.warn('Invalid or missing plan in URL');
+            }
+        } catch (err) {
+            //console.error('Error parsing plan from URL:', err);
+        }
+
+        const nextButtons = document.querySelectorAll('.nextBtn');
+        nextButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                try {
+                    if (index === 0) {
+                        const fullName = document.getElementById('fullname').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const company = document.getElementById('company').value.trim();
+                        const message = document.getElementById('message').value.trim();
+
+                        if (!fullName || !email || !company) {
+                            alert('Please fill in all required fields.');
+                            return;
+                        }
+
+                        checkoutPayload.customer = { fullName, email, company, message };
+
+                        const formData = new FormData();
+                        formData.append('fullname', fullName);
+                        formData.append('email', email);
+                        formData.append('company', company);
+                        formData.append('message', message);
+
+                        fetch('send-email.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(res => res.text())
+                            .then(res => {
+                                if (res === 'success') {
+                                    alert('Form submitted successfully!');
+                                } else {
+                                    alert('Failed to send email. Please try again.');
+                                }
+                            })
+                            .catch(err => {
+                                //console.error('Error sending email:', err);
+                                alert('An error occurred while sending the email.');
+                            });
+
+                    } else if (index === 1) {
+                        const selectedAddons = [];
+                        document.querySelectorAll('.addon-item.selected').forEach(el => {
+                            const name = el.dataset.name;
+                            const amount = parseFloat(el.dataset.amount);
+                            const quantity = parseInt(el.dataset.qty) || 1;
+                            const price_id = el.dataset.priceId;
+
+                            if (name && amount && price_id) {
+                                selectedAddons.push({ name, amount, quantity, price_id });
+                            }
+                        });
+
+                        checkoutPayload.addons = selectedAddons;
+                        //console.log('[STEP 1] Payload after selecting addons:', checkoutPayload);
+                    }
+                } catch (err) {
+                    //console.error('Error processing step:', err);
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+        });
+
+        document.getElementById('submitButton').addEventListener('click', () => {
+            try {
+                const loader = document.getElementById('loader');
+                loader.style.display = 'block';
+
+                const selectedAddons = [];
+                document.querySelectorAll('.addon-item.selected').forEach(checkbox => {
+                    selectedAddons.push({
+                        name: checkbox.dataset.name,
+                        amount: parseInt(checkbox.dataset.amount),
+                        quantity: parseInt(checkbox.dataset.qty) || 1,
+                        price_id: checkbox.dataset.priceId
+                    });
+                });
+
+                checkoutPayload.addons = selectedAddons;
+
+                if (!document.querySelector('script[src="stripe/checkout.js"]')) {
+                    const siteUrl = "<?php echo $siteurl; ?>";
+
+                    fetch(siteUrl + '/stripe/create.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(checkoutPayload)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            try {
+                                const customEmail = document.getElementById('email').value;
+                                document.getElementById('payment_email').value = customEmail;
+                                document.getElementById('clientSecret').value = data.clientSecret;
+                                window.totalAmount = data.totalAmount;
+
+                                const existingScript = document.querySelector('script[src="stripe/checkout.js"]');
+                                if (!existingScript) {
+                                    const script = document.createElement('script');
+                                    script.src = siteUrl + '/stripe/checkout.js';
+                                    script.onload = () => {
+                                        //console.log('Stripe script loaded successfully.');
+                                        loader.style.display = 'none';
+                                        if (typeof initialize === 'function') {
+                                            initialize(data.clientSecret);
+                                        }
+                                    };
+                                    script.onerror = () => {
+                                        //console.error('Failed to load stripe/checkout.js');
+                                        loader.innerHTML = "<p style='color: red;'>Failed to load payment form. Please try again.</p>";
+                                    };
+                                    document.head.appendChild(script);
+                                } else {
+                                    //console.log('Stripe script already loaded. Initiating with updated session...');
+                                    if (typeof initialize === 'function') {
+                                        initialize(data.clientSecret);
+                                    }
+                                    loader.style.display = 'none';
+                                }
+                            } catch (initErr) {
+                                //console.error('Error initializing Stripe:', initErr);
+                                loader.innerHTML = "<p style='color: red;'>Error initializing payment. Please refresh and try again.</p>";
+                            }
+                        })
+                        .catch(err => {
+                            //console.error('Error sending data to PHP:', err);
+                            loader.innerHTML = "<p style='color: red;'>Something went wrong. Please try again.</p>";
+                        });
+                } else {
+                    //console.log('Stripe script already loaded.');
+                    loader.style.display = 'none';
+                }
+            } catch (err) {
+                //console.error('Error during final submission:', err);
+                alert('An unexpected error occurred. Please try again.');
+            }
+        });
+    });
+    // Addons quantity change handlers
+    document.querySelectorAll('.addon-item').forEach(item => {
+        const qtyDisplay = item.querySelector('.qty-value');
+        const increaseBtn = item.querySelector('.increase');
+        const decreaseBtn = item.querySelector('.decrease');
+
+        increaseBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            let qty = parseInt(item.dataset.qty) || 1;
+            qty += 1;
+            item.dataset.qty = qty;
+            qtyDisplay.textContent = qty;
+            updateTotal();
+        });
+
+        decreaseBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            let qty = parseInt(item.dataset.qty) || 1;
+            if (qty > 1) {
+                qty -= 1;
+                item.dataset.qty = qty;
+                qtyDisplay.textContent = qty;
+                updateTotal();
+            }
+        });
+    });
+
 </script>

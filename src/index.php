@@ -423,7 +423,7 @@ include "header.php";
 
                     <div>
                         <p class=" mb-4">
-                            <span class="text-[var(--primary)] heading_4">6 for 5 months,</span> <br>
+                            <span class="text-[var(--primary)] heading_2">6 for 5 months,</span> <br>
                             <span class="subheadline_medium text-white"> buy 5 get 1 month free</span>
                         </p>
                         <!-- <h2 class="heading_2 mb-4 ">$3,499/mo</h2> -->
@@ -438,22 +438,23 @@ include "header.php";
                             <li class="page-nav">Best for: Brands ready to commit and grow faster</li>
                         </ul>
 
-                    </div>
+                        <!-- tooltip  -->
+                        <div class="relative my-[30px]  transition-all duration-300 ease-in-out">
+                            <ul class="pb-4 pl-[24px]">
+                                <li class="page-nav cursor-pointer text-[var(--primary)]" onclick="toggleSavings()">See
+                                    how
+                                    much you save</li>
+                            </ul>
 
-                    <div class="relative my-2 transition-all duration-300 ease-in-out">
-                        <ul class="pb-4 pl-[24px]">
-                            <li class="page-nav cursor-pointer text-[var(--primary)]" onclick="toggleSavings()">See how
-                                much you save</li>
-                        </ul>
-
-                        <div id="savings-info"
-                            class="opacity-0 scale-95 pointer-events-none transition-all duration-300 delay-200 ease-in-out px-4 py-4 text-center rounded-full bg-[#242424] text-white caption-2 whitespace-nowrap hidden">
-                            <span>🎉 $3,499</span> savings over 6&nbsp;months
+                            <div id="savings-info"
+                                class="hidden group group-hover:block scale-95 pointer-events-none transition-all duration-300 delay-200 ease-in-out px-4 py-4 text-center rounded-full bg-[#242424] text-white caption-2 whitespace-nowrap">
+                                <span>🎉 $3,499</span> 
+                                savings over 6&nbsp;months
+                            </div>
                         </div>
+
+
                     </div>
-
-
-
 
                     <!-- <div class="relative transition-all duration-300 ease-in-out">
                         <ul class="pb-4 pl-[24px]">
@@ -675,9 +676,9 @@ include "header.php";
             </div>
         </div>
 
-      <h1 class="subheadline_medium my-[30px]">Social Creative</h1>
+        <h1 class="subheadline_medium my-[30px]">Social Creative</h1>
 
-        
+
         <div class="slider" data-direction="right" data-speed="130">
             <div class="slider-track">
                 <div class="slide"><img class="lg:h-[350px]" src="./assets/image/right-1.webp" alt="Logo 1" /></div>
@@ -693,7 +694,7 @@ include "header.php";
             </div>
         </div>
 
-       <div class="text-center mt-4">
+        <div class="text-center mt-8">
             <p class="body-text-2 text-[#B0B0B0]"> Social media, paid ads, websites, branding - we build assets that
                 drive real growth.</p>
         </div>
@@ -751,7 +752,7 @@ include "header.php";
         <div class="grid mt-10">
             <div class="text-center">
                 <a onclick="openFormPopup()" class="cta-font inline-flex items-center gap-2 orange-cta cursor-pointer">
-                    Get My Free Report
+                    Get Your Free Report
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 39 38" fill="none">
                             <circle cx="19.5" cy="19" r="19" fill="#EEEEEE" />
@@ -787,37 +788,37 @@ include "header.php";
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
                             <img src="./assets/image/right-mark.svg" alt="mark">
-                            <p class="subheadline_medium text-black">On-Demand</p>
+                            <p class="page-nav text-black">On-Demand</p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
                             <img src="./assets/image/right-mark.svg" alt="mark">
-                            <p class="subheadline_medium text-black">Fast Delivery</p>
+                            <p class="page-nav text-black">Fast Delivery</p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
                             <img src="./assets/image/right-mark.svg" alt="mark">
-                            <p class="subheadline_medium text-black">Unlimited Leverage</p>
+                            <p class="page-nav text-black">Unlimited Leverage</p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
                             <img src="./assets/image/right-mark.svg" alt="mark">
-                            <p class="subheadline_medium text-black">Built for founders </p>
+                            <p class="page-nav text-black">Built for founders </p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
                             <img src="./assets/image/right-mark.svg" alt="mark">
-                            <p class="subheadline_medium text-black">Performance-first</p>
+                            <p class="page-nav text-black">Performance-first</p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
                             <img src="./assets/image/right-mark.svg" alt="mark">
-                            <p class="subheadline_medium text-black">Subscription-simplified</p>
+                            <p class="page-nav text-black">Subscription-simplified</p>
                         </div>
                     </div>
                 </div>
@@ -839,20 +840,20 @@ include "header.php";
         <div class="container mx-auto">
             <div class="grid">
                 <div class="text-center">
-                    <h1 class="large_title_small">Testimonial</h1>
+                    <h1 class="large_title_small">Testimonials</h1>
                     <p class="body-text-2 text-[#B0B0B0]">Hear What Our Clients Have To Say</p>
                 </div>
             </div>
         </div>
 
-        <div class="container mx-auto mt-3">
+        <div class="container mx-auto mt-8">
             <div class="grid">
                 <div class="slider" data-direction="left" data-speed="80">
                     <div class="slider-track">
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
 
                                 <p class="caption-2 text-black mb-4">
                                     They go above and beyond to ensure your credit is maximized. Organized, responsive,
@@ -874,7 +875,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
 
                                 <p class="caption-2 text-black mb-4">
                                     Occams delivered everything they promised. I referred two friends who also received
@@ -896,7 +897,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="caption-2 text-black mb-4">
                                     Occams was fantastic! Great communication and they delivered on every promise. I was
                                     skeptical at first, but they came through.
@@ -917,7 +918,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="caption-2 text-black mb-4">
                                     Great team—very personable, knowledgeable, and helpful!
                                 </p>
@@ -937,7 +938,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     They did exactly what they promised. It was a very easy and pleasant experience.
                                 </p>
@@ -956,7 +957,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     All reps are knowledgeable and focused on service. My questions were addressed with
                                     care and professionalism.
@@ -976,7 +977,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     I always receive answers by the end of the day. The team was patient and made sure I
                                     understood everything.
@@ -996,7 +997,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     Great experience! Everyone was professional and prompt in answering all my
                                     questions. Great job!
@@ -1016,7 +1017,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     Very easy to work with. It gave me good results. I would recommend it.
                                 </p>
@@ -1035,7 +1036,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     Thorough, knowledgeable, and friendly. They explained everything and helped through
                                     the entire process.
@@ -1055,7 +1056,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     They were professional, patient, and easy to work with.
                                 </p>
@@ -1078,14 +1079,14 @@ include "header.php";
             </div>
         </div>
 
-        <div class="container mx-auto mt-10">
+        <div class="container mx-auto mt-6">
             <div class="grid">
                 <div class="slider" data-direction="right" data-speed="70">
                     <div class="slider-track">
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
 
                                 <p class="caption-2 text-black mb-4">
                                     They go above and beyond to ensure your credit is maximized. Organized, responsive,
@@ -1107,7 +1108,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border  border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
 
                                 <p class="caption-2 text-black mb-4">
                                     Occams delivered everything they promised. I referred two friends who also received
@@ -1129,7 +1130,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="caption-2 text-black mb-4">
                                     Occams was fantastic! Great communication and they delivered on every promise. I was
                                     skeptical at first, but they came through.
@@ -1150,7 +1151,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="caption-2 text-black mb-4">
                                     Great team—very personable, knowledgeable, and helpful!
                                 </p>
@@ -1170,7 +1171,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     They did exactly what they promised. It was a very easy and pleasant experience.
                                 </p>
@@ -1189,7 +1190,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     All reps are knowledgeable and focused on service. My questions were addressed with
                                     care and professionalism.
@@ -1209,7 +1210,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     I always receive answers by the end of the day. The team was patient and made sure I
                                     understood everything.
@@ -1229,7 +1230,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     Great experience! Everyone was professional and prompt in answering all my
                                     questions. Great job!
@@ -1249,7 +1250,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     Very easy to work with. It gave me good results. I would recommend it.
                                 </p>
@@ -1268,7 +1269,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     Thorough, knowledgeable, and friendly. They explained everything and helped through
                                     the entire process.
@@ -1288,7 +1289,7 @@ include "header.php";
 
                         <div class="slide-testimonial">
                             <div
-                                class="max-w-xs rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
+                                class="max-w-[375px] rounded-[1.25rem] border border-[#676767] shadow-[0_6px_12px_0_rgba(0,0,0,0.10),0_1px_3px_0_rgba(0,0,0,0.08)] p-4 bg-white">
                                 <p class="text-black caption-2 mb-4">
                                     They were professional, patient, and easy to work with.
                                 </p>
@@ -1568,46 +1569,51 @@ include "header.php";
 
 
 <div class="spacing"></div>
+<!-- Small Preview -->
+<div class="video-preview" id="videoPreview">
+    <button class="preview-close" id="previewCloseBtn">&times;</button>
 
-<div id="videoContainer" class="small">
-    <span id="closeBtn">&times;</span>
-    <video id="promoVideo" autoplay playsinline muted>
+    <video autoplay muted loop playsinline>
         <source src="https://digital.occamsadvisory.com/assets/video/business_app_pro_masterclass_introduction.mp4"
             type="video/mp4">
-        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Fullscreen Slide-in Video -->
+<div class="video-overlay" id="videoOverlay">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <video id="fullscreenVideo" autoplay playsinline muted>
+        <source src="https://digital.occamsadvisory.com/assets/video/business_app_pro_masterclass_introduction.mp4"
+            type="video/mp4">
     </video>
 </div>
 
 <script>
-    const container = document.getElementById('videoContainer');
-    const video = document.getElementById('promoVideo');
+    const preview = document.getElementById('videoPreview');
+    const overlay = document.getElementById('videoOverlay');
+    const fullscreenVideo = document.getElementById('fullscreenVideo');
     const closeBtn = document.getElementById('closeBtn');
 
-    // Expand on click
-    container.addEventListener('click', function () {
-        container.classList.add('expanded');
-        closeBtn.style.display = 'block';
-
-        // Unmute and play from start
-        video.muted = false;
-        video.currentTime = 0;
-        video.play().catch((err) => {
-            console.warn('Autoplay with sound blocked by browser:', err);
-        });
+    preview.addEventListener('click', () => {
+        overlay.classList.add('active');
+        fullscreenVideo.currentTime = 0;
+        fullscreenVideo.muted = false;
+        fullscreenVideo.play();
     });
 
-    // Collapse on close
-    closeBtn.addEventListener('click', function (e) {
-        e.stopPropagation(); // Prevent expand re-trigger
-        container.classList.remove('expanded');
-        closeBtn.style.display = 'none';
-
-        // ✅ Mute and pause video
-        video.muted = true;
-        // video.pause();
+    closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        fullscreenVideo.pause();
+        fullscreenVideo.muted = true;
     });
+    const previewCloseBtn = document.getElementById('previewCloseBtn');
+
+    previewCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent triggering the fullscreen video
+        preview.style.display = 'none';
+    });
+
 </script>
-
 
 <?php
 include "footer.php"
@@ -2006,18 +2012,18 @@ include "getstarted.php"
 </script>
 <script>
     function openCheckout(plan) {
-        window.open(`step-form.php?plan=${plan}`, '_blank');
+        window.open(`step-form.php?plan=${plan}`,);
     }
 </script>
 
 <!-- script to show and hide the tooltip of popular pricing  -->
-<script>
+<!-- <script>
     function toggleSavings() {
         const el = document.getElementById('savings-info');
 
         if (el.classList.contains('hidden')) {
             el.classList.remove('hidden');
-            // Trigger transition after reflow
+         
             requestAnimationFrame(() => {
                 el.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
                 el.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
@@ -2026,13 +2032,13 @@ include "getstarted.php"
             el.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
             el.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
 
-            // Wait for transition to end before hiding
+         
             setTimeout(() => {
                 el.classList.add('hidden');
-            }, 300); // Match duration
+            }, 300); 
         }
     }
-</script>
+</script> -->
 
 
 

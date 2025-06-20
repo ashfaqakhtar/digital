@@ -54,7 +54,7 @@
 
 .page-nav {
     font-size: calc(14px + (18 - 14) * ((100vw - 400px) / (1920 - 400)));
-    font-weight: 400;
+    font-weight:300;
     font-family: inter;
     line-height: normal;
 }
@@ -86,7 +86,7 @@
     font-family: inter;
     /* line-height: calc(40px + (90 - 40) * (100vw - 400px) / (1920 - 400)); */
     line-height: normal;
-    font-weight: 400;
+    font-weight:300;
 }
 
 .body-text-3 {
@@ -94,7 +94,7 @@
     font-family: inter;
     /* line-height: calc(40px + (90 - 40) * (100vw - 400px) / (1920 - 400)); */
     line-height: normal;
-    font-weight: 400;
+    font-weight:300;
     letter-spacing: 5%;
 }
 
@@ -109,14 +109,14 @@
     font-size: calc(16px + (20 - 16) * ((100vw - 400px) / (1920 - 400)));
     line-height: calc(26px + (36 - 26) * ((100vw - 400px) / (1920 -400)));
     font-family: inter;
-    font-weight: 400;
+    font-weight:300;
 }
 
 .body-copy-2 {
     font-size: calc(16px + (22 - 16) * ((100vw - 400px) / (1920 - 400)));
     line-height: calc(22px + (32 - 22) * ((100vw - 400px) / (1920 - 400)));
     font-family: inter;
-    font-weight: 400;
+    font-weight:300;
 }
 
 
@@ -124,7 +124,7 @@
     font-size: calc(14px + (16 - 14) * ((100vw - 400px) / (1920 - 400)));
     line-height: calc(22px + (26 - 22) * ((100vw - 400px) / (1920 - 400)));
     font-family: inter;
-    font-weight: 400;
+    font-weight:300;
 }
 
 

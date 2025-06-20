@@ -11,10 +11,10 @@
     .then(res => res.text())
     .then(response => {
       if (response.trim() === "success") {
-        alert("Email sent successfully!");
+        //alert("Email sent successfully!");
         // Optionally redirect or move to next step
       } else {
-        alert("Email sending failed.");
+        //alert("Email sending failed.");
       }
     })
     .catch(() => alert("Something went wrong."));

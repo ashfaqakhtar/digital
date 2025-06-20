@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thanks for your order!</title>
+  <link rel="stylesheet" href="return.css">
+</head>
+<body>
+  <section id="success" class="hidden">
+    <p>
+      We appreciate your business! A confirmation email will be sent to <span id="customer-email"></span>.
+      If you have any questions, please email <a href="mailto:orders@example.com">orders@example.com</a>.
+    </p>
+    <div id="orderDetails"></div>
+    <div id="customerName"></div>
+    <div id="customerEmail"></div>  
+    <div id="customerCompany"></div>
+  </section>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id');
+
+    if (sessionId) {
+      fetch(`get-session.php?session_id=${sessionId}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.error) {
+            console.error(data.error);
+            return;
+          }
+
+          const emailSpan = document.getElementById('customer-email');
+          emailSpan.textContent = data.customer_email || 'your email';
+
+          const details = document.getElementById('order-details');
+          details.innerHTML = `
+            <p><strong>Plan:</strong> ${data.plan_name} - ${data.plan_price / 100}</p>
+            ${data.addons.map(addon => 
+              `<p><strong>Addon:</strong> ${addon.name} - ${addon.price / 100} x ${addon.qty}</p>`
+            ).join('')}
+          `;
+
+          document.getElementById('success').classList.remove('hidden');
+        });
+    }
+  </script>
+</body>
+</html>

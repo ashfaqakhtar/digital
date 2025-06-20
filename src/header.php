@@ -36,10 +36,12 @@
     <!-- aos    -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://js.stripe.com/basil/stripe.js"></script>
+    <!--<link rel="stylesheet" href="stripe/checkout.css" />-->
 </head>
 
 <body class="bg-[#000] text-white transition-all duration-300 background_image">
-    <div id="cursor-dot"></div>
+    <div id="cursor-dot hidden lg:block"></div>
     <button id="backToTop" title="Go to top">↑ Top</button>
 
 
@@ -166,14 +168,14 @@
         });
 
         // Listen for the scroll event and log the event data
-        lenis.on('scroll', (e) => {
+        /*lenis.on('scroll', (e) => {
             console.log(e);
-        });
+        });*/
     </script>
 
     <script>
         // Initialize a new Lenis instance for smooth scrolling
-        const lenis = new Lenis();
+        //const lenis = new Lenis();
 
         // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
         lenis.on('scroll', ScrollTrigger.update);
