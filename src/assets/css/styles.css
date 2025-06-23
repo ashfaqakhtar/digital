@@ -1049,7 +1049,7 @@ html {
 
 .footer-services span {
     /* pointer-events: none !important; */
-    cursor: pointer;
+    cursor:context-menu;
     text-decoration: none;
 }
 .footer-services span:hover{

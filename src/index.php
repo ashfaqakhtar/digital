@@ -71,7 +71,7 @@ include "header.php";
     <div class="container mx-auto px-4 lg:px-8 mt-10">
         <div class="grid">
             <div class="slider" data-direction="left" data-speed="80">
-                <div class="slider-track">
+                <div class="slider-track ">
                     <div class="slide"><img src="./assets/image/Awards Logo/2023_INC_PowerPartner_Standard_Logo 2.png"
                             alt="Logo 1" /></div>
                     <div class="slide"><img src="./assets/image/Awards Logo/Image 47 1.png" alt="Logo 2" /></div>
@@ -448,7 +448,7 @@ include "header.php";
 
                             <div id="savings-info"
                                 class="hidden group group-hover:block scale-95 pointer-events-none transition-all duration-300 delay-200 ease-in-out px-4 py-4 text-center rounded-full bg-[#242424] text-white caption-2 whitespace-nowrap">
-                                <span>🎉 $3,499</span> 
+                                <span>🎉 $3,499</span>
                                 savings over 6&nbsp;months
                             </div>
                         </div>
@@ -1587,6 +1587,8 @@ include "header.php";
             type="video/mp4">
     </video>
 </div>
+
+
 
 <script>
     const preview = document.getElementById('videoPreview');

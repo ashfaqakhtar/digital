@@ -51,51 +51,60 @@
             </div>
             <div class="grid grid-cols-4 mt-[50px]">
 
-               
-                    <div class="col-span-2">
-                        <div class="flex gap-6 mt-2">
-                            <div class="mt-4">
-                                <h3 class="subheadline_medium py-2">Email</h3>
-                                <p class="body-text-1  py-2">digital360@occamsadvisory.com</p>
-                            </div>
+
+                <div class="col-span-2">
+                    <div class="flex gap-6 mt-2">
+                        <div class="mt-4">
+                            <h3 class="subheadline_medium py-2">Email</h3>
+                            <!-- <p class="body-text-1  py-2">digital360@occamsadvisory.com</p> -->
+                            <a href="mailto:digital360@occamsadvisory.com">
+                                <img src="./assets/image/od-email.png" alt="email">
+                            </a>
+
                         </div>
                     </div>
-                    <div class="col-span-2 mt-6">
+                </div>
+                <div class="col-span-2 mt-6">
 
-                        <div>
-                            <h2 class="subheadline_medium py-2">Follow us</h2>
-                            <div class="flex  gap-4">
+                    <div>
+                        <h2 class="subheadline_medium py-2">Follow us</h2>
+                        <div class="flex  gap-4">
 
-                                <a class="body-text-3 hover:underline"
-                                    href="https://instagram.com/occams_advisory?igshid=YTM0ZjI4ZDI=" target="_blank">
-                                    <img class="transition-all duration-300 ease-in-out hover:scale-120" title="Follow us on Instagram" src="./assets/image/logo/Insta.svg"
-                                        alt="instagram">
-                                </a>
-                                <a class="body-text-3 hover:underline" href="https://twitter.com/occamsadvisory"
-                                    target="_blank">
-                                    <img class="transition-all duration-300 ease-in-out hover:scale-120" title="Follow us on X" src="./assets/image/logo/x.svg" alt="X">
-                                </a>
-                                <a class="body-text-3 hover:underline" href="https://www.facebook.com/occamsadvisory"
-                                    target="blank">
-                                    <img class="transition-all duration-300 ease-in-out hover:scale-120" title="Follow us on Facebook" src="./assets/image/logo/FB.svg" alt="facebook">
-                                </a>
-                                <a class="body-text-3 hover:underline"
-                                    href="https://www.linkedin.com/company/2558181?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2558181%2Cidx%3A4-4-9%2CtarId%3A1471880741151%2Ctas%3Aoccams"
-                                    target="_blank">
-                                    <img class="transition-all duration-300 ease-in-out hover:scale-120" title="Follow us on Linkedin" src="./assets/image/logo/LIn.svg" alt="Linkedin">
-                                </a>
-                                <a class="body-text-3 hover:underline"
-                                    href="https://www.youtube.com/channel/UCvt7BRx0UazuQNdJslWpuqA" target="_blank">
-                                    <img class="transition-all duration-300 ease-in-out hover:scale-120" title="Follow us on Youtube" src="./assets/image/logo/YT.svg" alt="youtube">
-                                </a>
-                                <a class="body-text-3 hover:underline" href="https://www.tiktok.com/@occamsadvisory"
-                                    target="_blank">
-                                    <img class="transition-all duration-300 ease-in-out hover:scale-120" title="Follow us on Tiktok" src="./assets/image/logo/TT.svg" alt="Tiktok">
-                                </a>
-                            </div>
+                            <a class="body-text-3 hover:underline"
+                                href="https://instagram.com/occams_advisory?igshid=YTM0ZjI4ZDI=" target="_blank">
+                                <img class="transition-all duration-300 ease-in-out hover:scale-120"
+                                    title="Follow us on Instagram" src="./assets/image/logo/Insta.svg" alt="instagram">
+                            </a>
+                            <a class="body-text-3 hover:underline" href="https://twitter.com/occamsadvisory"
+                                target="_blank">
+                                <img class="transition-all duration-300 ease-in-out hover:scale-120"
+                                    title="Follow us on X" src="./assets/image/logo/x.svg" alt="X">
+                            </a>
+                            <a class="body-text-3 hover:underline" href="https://www.facebook.com/occamsadvisory"
+                                target="blank">
+                                <img class="transition-all duration-300 ease-in-out hover:scale-120"
+                                    title="Follow us on Facebook" src="./assets/image/logo/FB.svg" alt="facebook">
+                            </a>
+                            <a class="body-text-3 hover:underline"
+                                href="https://www.linkedin.com/company/2558181?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2558181%2Cidx%3A4-4-9%2CtarId%3A1471880741151%2Ctas%3Aoccams"
+                                target="_blank">
+                                <img class="transition-all duration-300 ease-in-out hover:scale-120"
+                                    title="Follow us on Linkedin" src="./assets/image/logo/LIn.svg" alt="Linkedin">
+                            </a>
+                            <a class="body-text-3 hover:underline"
+                                href="https://www.youtube.com/channel/UCvt7BRx0UazuQNdJslWpuqA" target="_blank">
+                                <img class="transition-all duration-300 ease-in-out hover:scale-120"
+                                    title="Follow us on Youtube" src="./assets/image/logo/YT.svg" alt="youtube">
+                            </a>
+                            <a class="body-text-3 hover:underline" href="https://www.tiktok.com/@occamsadvisory"
+                                target="_blank">
+                                <img class="transition-all duration-300 ease-in-out hover:scale-120"
+                                    title="Follow us on Tiktok" src="./assets/image/logo/TT.svg" alt="Tiktok">
+                            </a>
                         </div>
                     </div>
-           
+                </div>
+
 
             </div>
         </div>
