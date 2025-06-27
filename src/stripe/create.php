@@ -33,6 +33,7 @@ if (!empty($input['addons'])) {
         $metadata["addon_{$index}_name"] = $addon['name'];
         $metadata["addon_{$index}_price"] = $addon['amount'];
         $metadata["addon_{$index}_qty"] = $addon['quantity'];
+        $metadata["addon_{$index}_tablabel"] = $addon['tablabel'];
 
          // Multiply addon amount by quantity
         $totalAmount += $addon['amount'] * $addon['quantity'];

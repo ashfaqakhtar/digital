@@ -215,25 +215,25 @@ include "header.php";
                             <div
                                 class="step-count flex flex-col items-center absolute -top-[7px] lg:top-[100px] md:top-[40px]">
                                 <div class=" heading_1_bold">01</div>
-                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full my-1"></div>
-                                <div class="h-[241px] w-px border-l-2 border-dotted border-[var(--primary)]"></div>
+                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full"></div>
+                                <div class="h-[248px] lg:h-[210px] first-count w-px border-l-2 border-dotted border-[var(--primary)]"></div>
                             </div>
 
                             <!-- Step 2 -->
                             <div
-                                class="step-count flex flex-col items-center mt-2 absolute top-[284px] lg:top-[434px] md:top-[345px]">
-                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full my-1"></div>
+                                class="step-count flex flex-col items-center mt-2 absolute top-[284px] lg:top-[400px] md:top-[345px]">
+                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full"></div>
                                 <div class=" heading_1_bold">02</div>
-                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full my-1"></div>
+                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full "></div>
                                 <div
-                                    class="h-[248px] md:h-[212px] w-px border-l-2 border-dotted border-[var(--primary)]">
+                                    class="h-[248px] second-count md:h-[221px] w-px border-l-2 border-dotted border-[var(--primary)]">
                                 </div>
                             </div>
 
                             <!-- Step 3 -->
                             <div
-                                class="step-count flex flex-col items-center mt-2 absolute top-[610px] lg:top-[762px] md:top-[646px]">
-                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full my-1"></div>
+                                class="step-count flex flex-col items-center mt-2 absolute top-[600px] lg:top-[727px] md:top-[646px]">
+                                <div class="w-3 h-3 bg-[var(--primary)] rounded-full"></div>
 
                                 <div class=" heading_1_bold">03</div>
                                 <div class="w-3 h-3 bg-[var(--primary)] rounded-full my-1 md:hidden"></div>
@@ -772,6 +772,52 @@ include "header.php";
 
 <div class="spacing"></div>
 
+<!-- google ads section  -->
+
+<section class="google-section-section">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid">
+            <div class="google-ads-heading">
+                <h1 class="large_title_small text-center text-white">Certificates and Accreditations  </h1>
+                <h2 class="body-text-2 text-center text-[#B0B0B0]">Demonstrating our commitment to excellence, security,
+                    and industry best practices. </h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[70px] mt-10">
+            <div class="border md:w-[65%] lg:w-full md:mx-auto border-[#676767] rounded-[85px] p-[12px]  transition-all duration-300 ease-in-out  hover:border-[#F36B21] hover:bg-[linear-gradient(154deg,_#000_80.02%,_#F36B21_123.85%)] hover:scale-105">
+                <div class="google-ads-inner flex justify-center items-center gap-[30px]">
+                    <img class="h-[92px] md:h-full" src="./assets/image/logo/google-ads.webp" alt="google ads logo">
+                    <div>
+                        <a href="https://skillshop.credential.net/b89c310e-52af-45ef-9c0b-b87e524648d9#acc.XtvsiGmj" target="_blank">
+                            <h6 class="heading_4">Google Ads Search</h6>
+                        </a>
+                        <p class="body-text-2 text-[#B0B0B0] lg:pr-[80px] mt-3">We build search campaigns that boost visibility and drive
+                            real results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border md:w-[65%] lg:w-full md:mx-auto border-[#676767] rounded-[85px] p-[12px] transition-all duration-300 ease-in-out  hover:border-[#F36B21] hover:bg-[linear-gradient(154deg,_#000_80.02%,_#F36B21_123.85%)] hover:scale-105">
+                <div class="google-ads-inner flex justify-center items-center gap-[30px]">
+                    <img class="h-[92px] md:h-full" src="./assets/image/logo/google-analytis.webp" alt="google ads logo">
+                    <div>
+                        <a href="https://skillshop.credential.net/59fa117f-8000-4045-b668-d4a0f30d8a2e#acc.HTitWAVN" target="_blank">
+                            <h6 class="heading_4">Google Analytics</h6>
+                        </a>
+                        <p class="body-text-2 text-[#B0B0B0] lg:pr-[80px] mt-3">Certified to track behavior, analyze performance, and drive insights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- google ads section ends -->
+
+
+<div class="spacing"></div>
+
 <!-- why occams digital section   -->
 <section>
     <div class="container mx-auto">
@@ -783,7 +829,7 @@ include "header.php";
         </div>
 
         <div class="grid">
-            <div class="slider mt-[50px]" data-direction="left" data-speed="70">
+            <div class="slider mt-[50px]" data-direction="rightx" data-speed="70">
                 <div class="slider-track">
                     <div class="slide">
                         <div class="bg-white rounded-full p-4 flex gap-3 items-center">
@@ -1565,9 +1611,6 @@ include "header.php";
 <div class="spacing"></div>
 
 
-
-
-
 <div class="spacing"></div>
 <!-- Small Preview -->
 <div class="video-preview" id="videoPreview">
@@ -1626,7 +1669,7 @@ include "getstarted.php"
     ?>
 
 
-
+<!-- word changing  -->
 <script type="text/javascript">
     const words = ["One Subscription", "On Demand", "Unlimited Leverage"];
     let currentWord = 0;
@@ -1663,57 +1706,7 @@ include "getstarted.php"
     });
 </script>
 
-
-<script>
-    // Wait for DOM content to be fully loaded before running JS
-    document.addEventListener('DOMContentLoaded', () => {
-        const addonsBtn = document.getElementById('addonsBtn');
-        const popup = document.getElementById('addonsPopup');
-        const closeBtn = document.getElementById('closePopup');
-
-        addonsBtn.addEventListener('click', () => {
-            popup.classList.remove('hidden');
-        });
-
-        closeBtn.addEventListener('click', () => {
-            popup.classList.add('hidden');
-        });
-
-        // Close popup when clicking outside the popup content box
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                popup.classList.add('hidden');
-            }
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const cards = document.querySelectorAll('.step-count');
-
-        function checkActiveCard() {
-            const screenCenter = window.innerHeight / 2;
-
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const cardCenter = rect.top + rect.height / 2;
-
-                if (Math.abs(cardCenter - screenCenter) < rect.height / 2) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', checkActiveCard);
-        window.addEventListener('resize', checkActiveCard);
-        checkActiveCard(); // run on load
-    });
-</script>
-
-
+<!-- accordian  -->
 <script>
     function toggleAccordion(el) {
         const content = el.querySelector('.accordion-content');
@@ -1742,7 +1735,7 @@ include "getstarted.php"
     }
 </script>
 
-
+<!-- service bg  -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const section = document.querySelector(".service-section-bg");
@@ -1770,29 +1763,34 @@ include "getstarted.php"
     });
 </script>
 
-<!-- cards   -->
+<!-- cards js  -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const cards = document.querySelectorAll('.step-card');
+        const steps = document.querySelectorAll('.step-count');
 
-        function checkActiveCard() {
-            const screenCenter = window.innerHeight / 2;
+        function checkActive() {
+            const triggerY = window.innerHeight / 2;
 
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const cardCenter = rect.top + rect.height / 2;
+            cards.forEach((card, index) => {
+                const cardRect = card.getBoundingClientRect();
+                const cardCenter = cardRect.top + cardRect.height / 2;
 
-                if (Math.abs(cardCenter - screenCenter) < rect.height / 2) {
+                const isActive = Math.abs(cardCenter - triggerY) < cardRect.height / 2;
+
+                if (isActive) {
                     card.classList.add('active');
+                    if (steps[index]) steps[index].classList.add('active');
                 } else {
                     card.classList.remove('active');
+                    if (steps[index]) steps[index].classList.remove('active');
                 }
             });
         }
 
-        window.addEventListener('scroll', checkActiveCard);
-        window.addEventListener('resize', checkActiveCard);
-        checkActiveCard(); // run on load
+        window.addEventListener('scroll', checkActive);
+        window.addEventListener('resize', checkActive);
+        checkActive();
     });
 </script>
 
@@ -2014,7 +2012,7 @@ include "getstarted.php"
 </script>
 <script>
     function openCheckout(plan) {
-        window.open(`step-form.php?plan=${plan}`,);
+        window.location.href = `checkout.php?plan=${plan}`;
     }
 </script>
 

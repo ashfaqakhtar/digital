@@ -57,8 +57,8 @@
                         <div class="mt-4">
                             <h3 class="subheadline_medium py-2">Email</h3>
                             <!-- <p class="body-text-1  py-2">digital360@occamsadvisory.com</p> -->
-                            <a href="mailto:digital360@occamsadvisory.com">
-                                <img src="./assets/image/od-email.png" alt="email">
+                            <a class="group" href="mailto:digital360@occamsadvisory.com">
+                                <img class="hover:scale-105 transition-all duration-300 ease-in-out" src="./assets/image/od-email.png" alt="email">
                             </a>
 
                         </div>

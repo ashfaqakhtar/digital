@@ -1,7 +1,7 @@
 // This is a public sample test API key.
 // Don’t submit any personally identifiable information in requests made with this key.
 // Sign in to see your own test API key embedded in code samples.
-const stripe = Stripe("pk_test_51RYX7wDAo2OreUHGdcEW4IlCNTKS8EGwqvO9pQ9edTfiR8saG5a63snRajOBk4JLkcMfdB4RQjjjp965zmLwSQI900WJUCkycJ");
+const stripe = Stripe("pk_live_51Rb7fDHcnj11XqyCDeaCZgHzoKZakax2c3EDMU14ku78Stt03X7fHyVyxz12CHBX5n1kTRO3pJwEIBMqPruNtSBN00dnSEaJgT");
 
 let checkout;
 initialize();
@@ -19,9 +19,33 @@ document
 
 // Fetches a Checkout Session and captures the client secret
 async function initialize(clientSecret) {
-  const appearance = {
-    theme: 'stripe',
-  };
+ const appearance = {
+  theme: 'none',
+  variables: {
+    colorPrimary: '#F36B21',
+    colorBackground: '#1c1c1c',
+    colorText: '#ffffff',
+    fontFamily: 'Poppins, sans-serif',
+    spacingUnit: '5px',
+    borderRadius: '8px',
+  },
+  rules: {
+    '.Input': {
+      color: '#ffffff',
+      backgroundColor: '#1c1c1c',
+      border: '1px solid #4a5568',
+      boxShadow: 'none',
+    },
+    '.Label': {
+      color: '#f3f4f6',
+    },
+    '.Tab': {
+      border: '1px solid #fffff',
+      padding: '10px',
+      borderRadius: '8px',
+    },
+  },
+};
 
   checkout = await stripe.initCheckout({
     fetchClientSecret: () => clientSecret,

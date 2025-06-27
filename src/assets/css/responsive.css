@@ -1,11 +1,11 @@
 /* Mobile Devices (portrait and smaller phones) */
+
 @media only screen and (max-width: 480px) {
     .service-section-bg {
         background-repeat: no-repeat !important;
         background-size: contain !important;
         padding-bottom: 830px !important;
     }
-
     .how-ot-work-section-bg {
         margin-top: -810px !important;
     }
@@ -22,27 +22,22 @@
     .right-arrow svg {
         height: 70px !important;
     }
-
     .right-arrow {
         position: absolute;
         top: 216px !important;
         left: -24px !important;
     }
-
     .middle-arrow svg {
         height: 112px !important;
     }
-
     .middle-arrow {
         position: absolute;
         top: 350px !important;
         left: -60px !important;
     }
-
     .left-arrow svg {
         height: 85px !important;
     }
-
     .left-arrow {
         position: absolute;
         top: -23px !important;
@@ -63,16 +58,16 @@
     .header-box{
         width: 93% !important;
     }
+
     .step-count-main-box{
         transform: translateX(40vw);
     }
-
-
-
-
 }
 
+
+
 /* Tablets (portrait and small tablets) */
+
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
     /* Make the slick track a flex container */
@@ -85,17 +80,20 @@
         height: auto !important;
         display: flex !important;
     }
-
     /* Make the actual slide content fill the height */
+
     .pricing-slider .slick-slide>div {
         display: flex !important;
         flex-direction: column !important;
         height: 100% !important;
     }
+
 }
 
 /* Laptops (small to medium screens) */
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
     .glass-container-letter {
         padding: 100px 0px !important;
     }
@@ -105,7 +103,6 @@
         top: 319px !important;
         left: -19px !important;
     }
-
     .middle-arrow svg {
         height: 190px !important;
     }
@@ -126,9 +123,6 @@
         top: 210px !important;
         left: 71px !important;
     }
+
 }
 
-/* Desktops (larger screens) */
-@media only screen and (min-width: 1025px) {
-    /* CSS for desktops */
-}

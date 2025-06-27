@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/output.css">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSGSQHP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <meta name="google-site-verification" content="atbu8KlkNTFRr8TX0HshA5dp9uhWSo_lFEAbXIosu04">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TSGSQHP');</script>
+    <!-- End Google Tag Manager -->
+     
     <title>
         <?php echo $title; ?>
     </title>
@@ -31,6 +48,9 @@
 
     <link rel="preload" as="script" href="https://www.cdnstyles.com/static/snapshot_widget/v1/snapshot.widget.js">
 
+    <!-- SweetAlert2 CSS + JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
     <!-- aos    -->
@@ -41,7 +61,8 @@
 </head>
 
 <body class="bg-[#000] text-white transition-all duration-300 background_image">
-    <div id="cursor-dot hidden lg:block"></div>
+    <div id="cursor-dot" class="hidden lg:block"></div>
+
     <button id="backToTop" title="Go to top">↑ Top</button>
 
 
@@ -75,7 +96,7 @@
             <div class="flex items-center space-x-2">
                 <li class="list-none hidden lg:block">
 
-                    <a href="https://occams-digital.smblogin.com/login/"
+                    <a href="http://businessappdigital.occamsadvisory.com/"
                         class="page-nav inline-flex items-center gap-2 orange-cta">
                         Business App
                         <span>
@@ -92,28 +113,46 @@
                 </li>
 
 
-
-                <button id="mobileMenuBtn" class="lg:hidden flex flex-col justify-between w-8 h-6 relative z-50"
-                    aria-label="Toggle Menu">
-                    <span class="block w-8 h-1 bg-black transition-transform duration-300 ease-in-out"></span>
-                    <span class="block w-8 h-1 bg-black transition-opacity duration-300 ease-in-out"></span>
-                    <span class="block w-8 h-1 bg-black transition-transform duration-300 ease-in-out"></span>
+                <button id="mobileMenuBtn"
+                    class="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 z-50 relative">
+                    <span
+                        class="line block w-8 h-1 bg-white transition-all duration-300 ease-in-out origin-center"></span>
+                    <span
+                        class="line block w-8 h-1 bg-white transition-all duration-300 ease-in-out origin-center"></span>
+                    <span
+                        class="line block w-8 h-1 bg-white transition-all duration-300 ease-in-out origin-center"></span>
                 </button>
+
+
             </div>
 
         </nav>
 
         <!-- Mobile Navigation Menu -->
         <div id="mobileMenu"
-            class="hidden  flex-col items-center absolute top-full left-0 w-full bg-black border border-gray-200 rounded-lg shadow-lg p-5 lg:hidden">
-            <ul class="flex flex-col space-y-4 text-center">
+            class="hidden  flex-col items-center absolute top-[80px] right-0 bg-[#1c1c1c] rounded-[24px] shadow-lg p-5 lg:hidden">
+            <ul class="flex flex-col gap-[30px] ">
                 <li><a href="https://occamsadvisory.com/" target="_blank"><i class="fas fa-home text-white"></i></a>
                 </li>
-                <li><a href="#service-section" class="hover:text-gray-600 text-white">Services</a></li>
-                <li><a href="#how-it-works-section" class="hover:text-gray-600 text-white">How it Works</a></li>
-                <li><a href="#pricing-section" class="hover:text-gray-600 text-white">Pricing Plans</a></li>
+                <li>
+                    <a href="#service-section" class="hover:text-gray-600 text-white inline-flex gap-[10px]">Services
+                        <img class="pt-[3px]" src="./assets/image/logo/arrow-right.svg" alt="arrow">
+                    </a>
+                </li>
+                <li>
+                    <a href="#how-it-works-section" class="hover:text-gray-600 text-white inline-flex gap-[10px]">How it
+                        Works
+                        <img class="pt-[3px]" src="./assets/image/logo/arrow-right.svg" alt="arrow">
+                    </a>
+                </li>
+                <li>
+                    <a href="#pricing-section" class="hover:text-gray-600 text-white inline-flex gap-[10px]">Pricing
+                        Plans
+                        <img class="pt-[3px]" src="./assets/image/logo/arrow-right.svg" alt="arrow">
+                    </a>
+                </li>
                 <li class="list-none  lg:hidden">
-                    <a href="https://occams-digital.smblogin.com/login/"
+                    <a href="http://businessappdigital.occamsadvisory.com/"
                         class="page-nav inline-flex items-center gap-2 orange-cta">
                         Business App
                         <span>
@@ -136,24 +175,30 @@
 
 
     <script>
-        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const btn = document.getElementById("mobileMenuBtn");
+        const lines = btn.querySelectorAll(".line");
         const mobileMenu = document.getElementById("mobileMenu");
-        const spans = mobileMenuBtn.querySelectorAll("span");
 
-        mobileMenuBtn.addEventListener("click", function () {
+        let isOpen = false;
+
+        btn.addEventListener("click", () => {
+            isOpen = !isOpen;
             mobileMenu.classList.toggle("hidden");
 
-            if (!mobileMenu.classList.contains("hidden")) {
-                spans[0].classList.add("rotate-45", "translate-y-2");
-                spans[1].classList.add("opacity-0");
-                spans[2].classList.add("-rotate-45", "-translate-y-2");
+            if (isOpen) {
+                lines[0].classList.add("rotate-45", "translate-y-2");
+                lines[1].classList.add("opacity-0");
+                lines[2].classList.add("-rotate-45", "-translate-y-2");
             } else {
-                spans[0].classList.remove("rotate-45", "translate-y-2");
-                spans[1].classList.remove("opacity-0");
-                spans[2].classList.remove("-rotate-45", "-translate-y-2");
+                lines[0].classList.remove("rotate-45", "translate-y-2");
+                lines[1].classList.remove("opacity-0");
+                lines[2].classList.remove("-rotate-45", "-translate-y-2");
             }
         });
     </script>
+
+
+
 
     <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -199,6 +244,8 @@
             dot.style.top = e.clientY + 'px';
         });
     </script>
+
+
     <script>
         const btn = document.getElementById('backToTop');
 
@@ -225,25 +272,3 @@
             }, 3000);  // Adjust timing as needed
         });
     </script>
-    <!-- 
-    <script>
-        document.querySelectorAll('a.page-nav[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetID = this.getAttribute('href').slice(1);
-                const target = document.getElementById(targetID);
-
-                if (target) {
-                    const offset = 150;
-                    const bodyTop = document.body.getBoundingClientRect().top;
-                    const elementTop = target.getBoundingClientRect().top;
-                    const scrollPosition = elementTop - bodyTop - offset;
-
-                    window.scrollTo({
-                        top: scrollPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script> -->

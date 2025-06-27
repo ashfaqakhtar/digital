@@ -1,0 +1,5 @@
+[23-Jun-2025 17:10:42 UTC] PHP Fatal error:  Uncaught Error: Class "PHPMailer" not found in /home/customer/www/digital.occamsadvisory.com/public_html/src/stripe/return.php:87
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/digital.occamsadvisory.com/public_html/src/stripe/return.php on line 87
+[23-Jun-2025 17:37:30 UTC] PHP Parse error:  Unclosed '{' on line 24 in /home/customer/www/digital.occamsadvisory.com/public_html/src/stripe/return.php on line 213
