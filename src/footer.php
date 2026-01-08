@@ -27,23 +27,23 @@
                     <h2 class="subheadline_medium">Services</h2>
                     <div class="flex justify-between mt-6 footer-services">
                         <div class="flex flex-col gap-3">
-                            <span class="body-text-3 hover:underline">Digital Marketing</span>
-                            <span class="body-text-3 hover:underline"> Branding</span>
-                            <span class="body-text-3 hover:underline">Web Development</span>
-                            <span class="body-text-3 hover:underline">Video Production</span>
-                            <span class="body-text-3 hover:underline">Pricing Plans</span>
-                            <span class="body-text-3 hover:underline">SEO</span>
-                            <span class="body-text-3 hover:underline">Paid Ads</span>
-                            <span class="body-text-3 hover:underline">Social Graphics</span>
+                            <span class="body-text-3  cursor-context-menu">Digital Marketing</span>
+                            <span class="body-text-3  cursor-context-menu"> Branding</span>
+                            <span class="body-text-3  cursor-context-menu">Web Development</span>
+                            <span class="body-text-3  cursor-context-menu">Video Production</span>
+                            <span class="body-text-3  cursor-context-menu">Pricing Plans</span>
+                            <span class="body-text-3  cursor-context-menu">SEO</span>
+                            <span class="body-text-3  cursor-context-menu">Paid Ads</span>
+                            <span class="body-text-3  cursor-context-menu">Social Graphics</span>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <span class="body-text-3 hover:underline">Web Design</span>
-                            <span class="body-text-3 hover:underline">Landing Pages</span>
-                            <span class="body-text-3 hover:underline">Emails</span>
-                            <span class="body-text-3 hover:underline">Video Production</span>
-                            <span class="body-text-3 hover:underline">Branding</span>
-                            <span class="body-text-3 hover:underline">Reputation Management</span>
-                            <span class="body-text-3 hover:underline">e-commerce Sites</span>
+                            <span class="body-text-3  cursor-context-menu">Web Design</span>
+                            <span class="body-text-3  cursor-context-menu">Landing Pages</span>
+                            <span class="body-text-3  cursor-context-menu">Emails</span>
+                            <span class="body-text-3  cursor-context-menu">Video Production</span>
+                            <span class="body-text-3  cursor-context-menu">Branding</span>
+                            <span class="body-text-3  cursor-context-menu">Reputation Management</span>
+                            <span class="body-text-3  cursor-context-menu">e-commerce Sites</span>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,8 @@
                             <h3 class="subheadline_medium py-2">Email</h3>
                             <!-- <p class="body-text-1  py-2">digital360@occamsadvisory.com</p> -->
                             <a class="group" href="mailto:digital360@occamsadvisory.com">
-                                <img class="hover:scale-105 transition-all duration-300 ease-in-out" src="./assets/image/od-email.png" alt="email">
+                                <img class="hover:scale-105 transition-all duration-300 ease-in-out"
+                                    src="./assets/image/od-email.png" alt="email">
                             </a>
 
                         </div>
@@ -113,7 +114,7 @@
         <div class="container mx-auto px-4 lg:px-8 mt-20">
             <div class="grid grid-cols-2 border-t border-white pt-[50px]">
                 <div class="flex items-center">
-                    <p class="page-nav">© 2025 Occams Advisory All rights Reserved</p>
+                    <p class="page-nav">© <script>document.write(new Date().getFullYear());</script> Occams Advisory All rights Reserved</p>
                 </div>
 
                 <div class="privay-sec flex justify-end gap-6">
@@ -137,7 +138,7 @@
                                 w.onload = loader;
                             }
                         })(window, document);
-                    </script>
+                    </scrip>
                     <a href="https://www.iubenda.com/terms-and-conditions/89600218"
                         class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe "
                         title="Terms and Conditions ">Terms and Conditions</a>

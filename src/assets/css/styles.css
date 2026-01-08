@@ -1123,7 +1123,7 @@
 
 /* Fullscreen overlay */
 
-.video-overlay {
+/* .video-overlay {
     position: fixed;
     top: -100vh;
     left: 0;
@@ -1149,7 +1149,49 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+} */
+
+.video-overlay {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.6s ease;
+    z-index: 9999;
+    padding: 1rem;
+    box-sizing: border-box;
 }
+
+.video-overlay.active {
+    top: 0;
+}
+
+/* Default (portrait-friendly): centered with max size */
+.video-overlay video {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Landscape: true fullscreen */
+@media (orientation: landscape) {
+    .video-overlay video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        border-radius: 0;
+        max-height: none;
+        box-shadow: none;
+    }
+}
+
 
 .close-btn {
     position: absolute;
@@ -1195,7 +1237,62 @@
     color: var(--primary);
 }
 
-.footer-services span {
-    cursor: context-menu;
-    text-decoration: none;
+
+
+/* border animation css for certificate div on hero  */
+/* .animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 44px;
+  border: 2px solid var(--primary);
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0;
+  transform: scale(1.02); 
+  clip-path: polygon(
+    50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%
+  );
+  transition: opacity 0.3s ease-in;
 }
+
+.animated-border:hover::before {
+  opacity: 1;
+  animation: draw-border 1s linear forwards;
+}
+
+
+@keyframes draw-border {
+  0% {
+    clip-path: polygon(
+      0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%
+    );
+  }
+  20% {
+    clip-path: polygon(
+      0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%
+    );
+  }
+  40% {
+    clip-path: polygon(
+      0% 50%, 0% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%
+    );
+  }
+  60% {
+    clip-path: polygon(
+      0% 50%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%
+    );
+  }
+  80% {
+    clip-path: polygon(
+      0% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 0% 50%, 0% 50%
+    );
+  }
+} */
+
+/* border animation css for certificate div on hero ends  */

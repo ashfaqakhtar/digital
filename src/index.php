@@ -50,7 +50,43 @@ include "header.php";
             </div>
         </div>
 
+        <div class="grid grid-cols-1">
+            <div class=" mt-12 flex justify-center items-center ">
+                <div
+                    class="hero-certificate-section gap-4 flex justify-center items-center">
+                    <p class="text-[16px]">Certified by:</p>
+
+                    <a href="https://skillshop.credential.net/b89c310e-52af-45ef-9c0b-b87e524648d9#acc.XtvsiGmj" target="_blank">
+                        <img class="h-[70px] transition-all duration-300 ease-in-out hover:scale-105" src="./assets/image/logo/google-ads.webp" alt="google ads logo">
+                    </a>
+
+                    <a href="https://skillshop.credential.net/59fa117f-8000-4045-b668-d4a0f30d8a2e#acc.HTitWAVN" target="_blank">
+                        <img class="h-[70px] transition-all duration-300 ease-in-out hover:scale-105" src="./assets/image/logo/google-analytis.webp" alt="google ads logo">
+                    </a>
+                </div>
+
+                <!-- <div
+                    class="hero-certificate-section group relative flex items-center justify-center gap-4 px-4 py-[10px] rounded-[44px] border border-[#282828] bg-[#282828] transition-all duration-300 ease-in  animated-border hover:scale-105">
+                    <p class="text-[14px] text-white">Certified by:</p>
+
+                    <a href="https://skillshop.credential.net/b89c310e-52af-45ef-9c0b-b87e524648d9#acc.XtvsiGmj"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="h-12 transition-all duration-300 ease-in-out hover:scale-105"
+                            src="./assets/image/logo/google-ads.webp" alt="Google Ads Certification" />
+                    </a>
+
+                    <a href="https://skillshop.credential.net/59fa117f-8000-4045-b668-d4a0f30d8a2e#acc.HTitWAVN"
+                        target="_blank" rel="noopener noreferrer">
+                     <img class="h-12 transition-all duration-300 ease-in-out hover:scale-105" src="./assets/image/logo/google-analytis.webp" alt="google ads logo">
+                    </a>
+                </div> -->
+
+            </div>
+        </div>
+
     </div>
+
+
 
 </section>
 
@@ -216,7 +252,9 @@ include "header.php";
                                 class="step-count flex flex-col items-center absolute -top-[7px] lg:top-[100px] md:top-[40px]">
                                 <div class=" heading_1_bold">01</div>
                                 <div class="w-3 h-3 bg-[var(--primary)] rounded-full"></div>
-                                <div class="h-[248px] lg:h-[210px] first-count w-px border-l-2 border-dotted border-[var(--primary)]"></div>
+                                <div
+                                    class="h-[248px] lg:h-[210px] first-count w-px border-l-2 border-dotted border-[var(--primary)]">
+                                </div>
                             </div>
 
                             <!-- Step 2 -->
@@ -769,52 +807,6 @@ include "header.php";
     </div>
 </section>
 <!-- Digital Health Report ends -->
-
-<div class="spacing"></div>
-
-<!-- google ads section  -->
-
-<section class="google-section-section">
-    <div class="container mx-auto px-4 lg:px-8">
-        <div class="grid">
-            <div class="google-ads-heading">
-                <h1 class="large_title_small text-center text-white">Certificates and Accreditations  </h1>
-                <h2 class="body-text-2 text-center text-[#B0B0B0]">Demonstrating our commitment to excellence, security,
-                    and industry best practices. </h2>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[70px] mt-10">
-            <div class="border md:w-[65%] lg:w-full md:mx-auto border-[#676767] rounded-[85px] p-[12px]  transition-all duration-300 ease-in-out  hover:border-[#F36B21] hover:bg-[linear-gradient(154deg,_#000_80.02%,_#F36B21_123.85%)] hover:scale-105">
-                <div class="google-ads-inner flex justify-center items-center gap-[30px]">
-                    <img class="h-[92px] md:h-full" src="./assets/image/logo/google-ads.webp" alt="google ads logo">
-                    <div>
-                        <a href="https://skillshop.credential.net/b89c310e-52af-45ef-9c0b-b87e524648d9#acc.XtvsiGmj" target="_blank">
-                            <h6 class="heading_4">Google Ads Search</h6>
-                        </a>
-                        <p class="body-text-2 text-[#B0B0B0] lg:pr-[80px] mt-3">We build search campaigns that boost visibility and drive
-                            real results.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="border md:w-[65%] lg:w-full md:mx-auto border-[#676767] rounded-[85px] p-[12px] transition-all duration-300 ease-in-out  hover:border-[#F36B21] hover:bg-[linear-gradient(154deg,_#000_80.02%,_#F36B21_123.85%)] hover:scale-105">
-                <div class="google-ads-inner flex justify-center items-center gap-[30px]">
-                    <img class="h-[92px] md:h-full" src="./assets/image/logo/google-analytis.webp" alt="google ads logo">
-                    <div>
-                        <a href="https://skillshop.credential.net/59fa117f-8000-4045-b668-d4a0f30d8a2e#acc.HTitWAVN" target="_blank">
-                            <h6 class="heading_4">Google Analytics</h6>
-                        </a>
-                        <p class="body-text-2 text-[#B0B0B0] lg:pr-[80px] mt-3">Certified to track behavior, analyze performance, and drive insights</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- google ads section ends -->
-
 
 <div class="spacing"></div>
 
@@ -1604,11 +1596,61 @@ include "header.php";
 
 <div class="spacing"></div>
 
+<!-- google ads section  -->
+
+<section class="google-section-section">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid">
+            <div class="google-ads-heading">
+                <h1 class="large_title_small text-center text-white">Certificates and Accreditations  </h1>
+                <h2 class="body-text-2 text-center text-[#B0B0B0]">Demonstrating our commitment to excellence, security,
+                    and industry best practices. </h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[70px] mt-10">
+            <div
+                class="border md:w-[65%] lg:w-full md:mx-auto border-[#676767] rounded-[85px] p-[12px]  transition-all duration-300 ease-in-out  hover:border-[#F36B21] hover:bg-[linear-gradient(154deg,_#000_80.02%,_#F36B21_123.85%)] hover:scale-105">
+                <div class="google-ads-inner flex justify-center items-center gap-[30px]">
+                    <img class="h-[92px] md:h-full" src="./assets/image/logo/google-ads.webp" alt="google ads logo">
+                    <div>
+                        <a href="https://skillshop.credential.net/b89c310e-52af-45ef-9c0b-b87e524648d9#acc.XtvsiGmj"
+                            target="_blank">
+                            <h6 class="heading_4">Google Ads Search</h6>
+                        </a>
+                        <p class="body-text-2 text-[#B0B0B0] lg:pr-[80px] mt-3">We build search campaigns that boost
+                            visibility and drive
+                            real results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border md:w-[65%] lg:w-full md:mx-auto border-[#676767] rounded-[85px] p-[12px] transition-all duration-300 ease-in-out  hover:border-[#F36B21] hover:bg-[linear-gradient(154deg,_#000_80.02%,_#F36B21_123.85%)] hover:scale-105">
+                <div class="google-ads-inner flex justify-center items-center gap-[30px]">
+                    <img class="h-[92px] md:h-full" src="./assets/image/logo/google-analytis.webp"
+                        alt="google ads logo">
+                    <div>
+                        <a href="https://skillshop.credential.net/59fa117f-8000-4045-b668-d4a0f30d8a2e#acc.HTitWAVN"
+                            target="_blank">
+                            <h6 class="heading_4">Google Analytics</h6>
+                        </a>
+                        <p class="body-text-2 text-[#B0B0B0] lg:pr-[80px] mt-3">Certified to track behavior, analyze
+                            performance, and drive insights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- google ads section ends -->
+
+
 <!-- new letter section     -->
 <!-- new letter section ends    -->
 
 
-<div class="spacing"></div>
 
 
 <div class="spacing"></div>
